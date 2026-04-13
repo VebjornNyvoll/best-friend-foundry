@@ -1,0 +1,40 @@
+<div class="cpred-bf-card">
+  <div class="card-header">
+    {{#if actorImg}}<img src="{{actorImg}}" alt="{{actorName}}" />{{/if}}
+    <h3>Three-Arm Strike</h3>
+  </div>
+  <div class="card-body">
+    <div class="roll-result success">
+      Roll: {{rollResult}} ({{rollFormula}}) vs DV{{dv}} &mdash; Success!
+    </div>
+
+    <p>Choose one effect:</p>
+
+    <div class="card-buttons">
+      <button data-action="cpred-bf-three-arm-option"
+              data-actor-id="{{actorId}}"
+              data-target-id="{{targetId}}"
+              data-option="grapple">
+        Grapple / End Grapple
+      </button>
+      <button data-action="cpred-bf-three-arm-option"
+              data-actor-id="{{actorId}}"
+              data-target-id="{{targetId}}"
+              data-option="extraAttack">
+        Extra Attack (Claw or Jaw)
+      </button>
+      <button data-action="cpred-bf-three-arm-option"
+              data-actor-id="{{actorId}}"
+              data-target-id="{{targetId}}"
+              data-option="criticalInjury">
+        Random Body Critical Injury
+      </button>
+      <button data-action="cpred-bf-three-arm-option"
+              data-actor-id="{{actorId}}"
+              data-target-id="{{targetId}}"
+              data-option="reduceSP">
+        Reduce Target Armor SP by 4
+      </button>
+    </div>
+  </div>
+</div>

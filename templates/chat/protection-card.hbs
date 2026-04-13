@@ -1,0 +1,29 @@
+<div class="cpred-bf-card">
+  <div class="card-header">
+    {{#if actorImg}}<img src="{{actorImg}}" alt="{{actorName}}" />{{/if}}
+    <h3>Protection</h3>
+  </div>
+  <div class="card-body">
+    {{#if active}}
+    <div class="roll-result success">
+      Protection Activated
+    </div>
+    <p><strong>{{actorName}}</strong> draws its head and limbs into its shell.</p>
+    <p>Hardened Shell (SP {{shellSP}}) now protects the head.</p>
+    <p><strong>Cannot be targeted by Aimed Shots.</strong></p>
+    {{else}}
+    <div class="roll-result">
+      Protection Deactivated
+    </div>
+    <p><strong>{{actorName}}</strong> emerges from its shell.</p>
+    {{/if}}
+
+    <div class="card-buttons">
+      <button data-action="cpred-bf-protection"
+              data-actor-id="{{actorId}}"
+              class="full-width">
+        {{#if active}}Deactivate Protection{{else}}Activate Protection{{/if}}
+      </button>
+    </div>
+  </div>
+</div>

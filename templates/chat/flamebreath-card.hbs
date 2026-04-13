@@ -1,0 +1,20 @@
+<div class="cpred-bf-card">
+  <div class="card-header">
+    {{#if actorImg}}<img src="{{actorImg}}" alt="{{actorName}}" />{{/if}}
+    <h3>Flamebreath</h3>
+  </div>
+  <div class="card-body">
+    <p><strong>{{actorName}}</strong> unleashes a blast of fire!</p>
+    <p>{{description}}</p>
+
+    <div class="roll-result">
+      Attack: {{attackTotal}} ({{attackRoll}})
+    </div>
+
+    <div class="roll-result">
+      Damage: {{damageTotal}} ({{damageRoll}})
+    </div>
+
+    {{#if note}}<p><em>{{note}}</em></p>{{/if}}
+  </div>
+</div>

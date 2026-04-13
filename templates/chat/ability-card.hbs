@@ -1,0 +1,38 @@
+<div class="cpred-bf-card">
+  <div class="card-header">
+    {{#if actorImg}}<img src="{{actorImg}}" alt="{{actorName}}" />{{/if}}
+    <h3>{{abilityName}}</h3>
+  </div>
+  <div class="card-body">
+    {{#if actorName}}<p><strong>{{actorName}}</strong>{{#if targetName}} &rarr; {{targetName}}{{/if}}</p>{{/if}}
+    {{#if description}}<p>{{description}}</p>{{/if}}
+
+    {{#if attackTotal}}
+    <div class="roll-result">
+      Attack: {{attackTotal}} ({{attackRoll}})
+    </div>
+    {{/if}}
+
+    {{#if rollResult}}
+    <div class="roll-result {{#if success}}success{{else}}failure{{/if}}">
+      Roll: {{rollResult}} ({{rollFormula}}) vs DV{{dv}} &mdash; {{#if success}}Success!{{else}}Failed!{{/if}}
+    </div>
+    {{/if}}
+
+    {{#if result}}<p>{{{result}}}</p>{{/if}}
+
+    {{#if selfDamage}}
+    <div class="damage-self">
+      Self-damage: {{selfDamage}} HP (brain tumor feedback)
+    </div>
+    {{/if}}
+
+    {{#if showReload}}
+    <div class="card-buttons">
+      <button data-action="cpred-bf-airhypo-reload" data-actor-id="{{actorId}}" class="full-width">
+        Reload Airhypo ({{doses}}/{{maxDoses}})
+      </button>
+    </div>
+    {{/if}}
+  </div>
+</div>

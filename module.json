@@ -1,0 +1,97 @@
+{
+  "id": "cpred-best-friend",
+  "title": "Cyberpunk RED: Your New Best Friend",
+  "description": "Adds the Your New Best Friend DLC content to Cyberpunk RED - 8 cyberpets, 7 new cyberware items, rules, adventure hooks, and full ability automation.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Best Friend Foundry"
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "cyberpunk-red-core",
+        "type": "system",
+        "compatibility": {
+          "minimum": "0.92.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/cpred-best-friend.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "cyberpets",
+      "label": "Best Friend: Cyberpets",
+      "path": "packs/cyberpets",
+      "type": "Actor",
+      "system": "cyberpunk-red-core",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "cyberware",
+      "label": "Best Friend: Cyberware",
+      "path": "packs/cyberware",
+      "type": "Item",
+      "system": "cyberpunk-red-core",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "journals",
+      "label": "Best Friend: Journals",
+      "path": "packs/journals",
+      "type": "JournalEntry",
+      "system": "cyberpunk-red-core",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "macros",
+      "label": "Best Friend: Macros",
+      "path": "packs/macros",
+      "type": "Macro",
+      "system": "cyberpunk-red-core",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Your New Best Friend",
+      "color": "#ff3333",
+      "packs": [
+        "cyberpets",
+        "cyberware",
+        "journals",
+        "macros"
+      ]
+    }
+  ]
+}
