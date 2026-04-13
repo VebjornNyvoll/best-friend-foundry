@@ -32,15 +32,27 @@ export function getTargetedActor() {
 // ── CPR-Compatible Roll Helpers ─────────────────────────────────────
 
 /**
+ * Show a Foundry Roll in 3D dice (Dice So Nice / DDDice) if available.
+ * @param {Roll} roll - An evaluated Foundry Roll object
+ */
+async function show3dDice(roll) {
+  if (game.dice3d) {
+    await game.dice3d.showForRoll(roll, game.user, true);
+  }
+}
+
+/**
  * Roll 1d10 with CPR critical handling.
  * - Natural 10: roll another d10, ADD to total (critical success)
  * - Natural 1: roll another d10, SUBTRACT from total (critical failure)
+ * Triggers 3D dice animation if Dice So Nice is active.
  *
  * @returns {Promise<{total: number, initialRoll: number, critRoll: number,
  *   isCritSuccess: boolean, isCritFail: boolean}>}
  */
 export async function cprRoll() {
   const baseRoll = await new Roll("1d10").evaluate();
+  await show3dDice(baseRoll);
   const initialRoll = baseRoll.total;
 
   let critRoll = 0;
@@ -50,10 +62,12 @@ export async function cprRoll() {
   if (initialRoll === 10) {
     isCritSuccess = true;
     const extra = await new Roll("1d10").evaluate();
+    await show3dDice(extra);
     critRoll = extra.total;
   } else if (initialRoll === 1) {
     isCritFail = true;
     const extra = await new Roll("1d10").evaluate();
+    await show3dDice(extra);
     critRoll = extra.total;
   }
 
@@ -118,6 +132,7 @@ export async function cprAttackRoll(combatNumber) {
  */
 export async function cprDamageRoll(formula) {
   const roll = await new Roll(formula).evaluate();
+  await show3dDice(roll);
   return { total: roll.total, formula, result: roll.result };
 }
 
