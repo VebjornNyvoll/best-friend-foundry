@@ -162,26 +162,30 @@ items:
     name: Combat Jaw
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: vHeavyMelee
+      equipped: "equipped"
       damage: "4d6"
       rof: 1
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 15
       isRanged: false
   - _id: bf0weap00004b000
     _key: "!items!bf0weap00004b000"
     name: Cat Claws
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: heavyMelee
+      equipped: "equipped"
       damage: "3d6"
       rof: 2
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 15
       isRanged: false
   # --- CYBERWARE ---
   - _id: bf0cyber0004a000
@@ -189,7 +193,9 @@ items:
     name: Combat Jaw
     type: cyberware
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareExternal
       isWeapon: true
       isFoundational: true
@@ -201,7 +207,9 @@ items:
     system:
       description:
         value: "<p>Cloak that hides from all visual senses (DV17 Perception to spot). Must remain still for 1 minute to activate.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareExternal
       isWeapon: false
       isFoundational: false
@@ -213,7 +221,9 @@ items:
     system:
       description:
         value: "<p>Subdermal Armor with TUp +1 SP, providing SP 12.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareInternal
       isWeapon: false
       isFoundational: false
@@ -224,7 +234,9 @@ items:
     name: "Subdermal Armor (TUp +1 SP)"
     type: armor
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       isEquipped: true
       bodyLocation:
         sp: 12

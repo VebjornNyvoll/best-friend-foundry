@@ -133,41 +133,43 @@ items:
     name: Teeth
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: lightMelee
+      equipped: "equipped"
       damage: "2d6"
       rof: 2
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 8
       isRanged: false
       magazine:
         value: 0
         max: 0
       fireModes:
-        singleShot: false
-        autofire: false
-        suppressive: false
+        autoFire: 0
+        suppressiveFire: false
   - _id: bf0weap00001b000
     _key: "!items!bf0weap00001b000"
     name: Brawling Attack
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: unarmed
+      equipped: "equipped"
       damage: "1d6"
       rof: 2
       weaponSkill: brawling
       attackmod: 0
-      combatNumber: 8
       isRanged: false
       magazine:
         value: 0
         max: 0
       fireModes:
-        singleShot: false
-        autofire: false
-        suppressive: false
+        autoFire: 0
+        suppressiveFire: false
   # --- CYBERWARE ---
   - _id: bf0cyber0001a000
     _key: "!items!bf0cyber0001a000"
@@ -176,7 +178,9 @@ items:
     system:
       description:
         value: "<p>TUp (Independent Mounting) Homing Tracer Cyberfinger. Points in the direction of its linked tracer within 1 mile.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberArm
       isWeapon: false
       isFoundational: false
@@ -188,7 +192,9 @@ items:
     system:
       description:
         value: "<p>TUp (+1 Option Slot) Cybereye with Chipware Compartment (conceals up to 4 chipware) and Hardened Cybereye Casing (immune to EMP/electric/microwaver).</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberEye
       isWeapon: false
       isFoundational: true
@@ -201,7 +207,9 @@ items:
     system:
       description:
         value: "<p>Subdermal Armor providing SP 11 to body and head.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareInternal
       isWeapon: false
       isFoundational: false
@@ -212,7 +220,9 @@ items:
     name: Subdermal Armor
     type: armor
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       isEquipped: true
       bodyLocation:
         sp: 11

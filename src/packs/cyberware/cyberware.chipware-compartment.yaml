@@ -9,7 +9,9 @@ system:
     chat: ""
     unpiped: ""
   favorite: false
-  source: "Your New Best Friend"
+  source:
+    book: "Your New Best Friend"
+    page: 0
   type: cyberEye
   isWeapon: false
   isFoundational: false

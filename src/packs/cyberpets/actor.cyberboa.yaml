@@ -172,13 +172,15 @@ items:
     name: "Vampyres (TUp Airhypo)"
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: lightMelee
+      equipped: "equipped"
       damage: "1d6"
       rof: 2
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 15
       isRanged: false
       description:
         value: "<p>On hit, Airhypo injects a dose of loaded substance (5 dose capacity).</p>"
@@ -187,13 +189,15 @@ items:
     name: Brawling Attack
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: unarmed
+      equipped: "equipped"
       damage: "3d6"
       rof: 2
       weaponSkill: brawling
       attackmod: 0
-      combatNumber: 16
       isRanged: false
   # --- CYBERWARE ---
   - _id: bf0cyber0006a000
@@ -203,7 +207,9 @@ items:
     system:
       description:
         value: "<p>Flashbulb mounted via Third Eye TUp. Forces DV15 Resist Torture/Drugs or Damaged Eye Critical for 1 minute.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareExternal
       isWeapon: false
       isFoundational: false
@@ -215,7 +221,9 @@ items:
     system:
       description:
         value: "<p>Neural Link with Chipware Socket and Pain Editor. Ignores wound penalties.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: neuralWare
       isWeapon: false
       isFoundational: true
@@ -228,7 +236,9 @@ items:
     system:
       description:
         value: "<p>Subdermal Armor with TUp +1 SP, providing SP 12.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareInternal
       isWeapon: false
       isFoundational: false
@@ -240,7 +250,9 @@ items:
     system:
       description:
         value: "<p>Vampyres with Airhypo TUp. On successful attack, injects a dose of loaded substance. Holds 5 doses of a single Biotoxin, Poison, or Street Drug.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberArm
       isWeapon: true
       isFoundational: false
@@ -251,7 +263,9 @@ items:
     name: "Subdermal Armor (TUp +1 SP)"
     type: armor
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       isEquipped: true
       bodyLocation:
         sp: 12

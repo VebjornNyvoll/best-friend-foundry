@@ -162,13 +162,15 @@ items:
     name: Venom Fangs/Claws
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: lightMelee
+      equipped: "equipped"
       damage: "1d6"
       rof: 2
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 12
       isRanged: false
       description:
         value: "<p>On hit, target must beat DV13 Resist Torture/Drugs or take 1d6 additional damage directly to HP.</p>"
@@ -177,13 +179,15 @@ items:
     name: Brawling Attack
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: unarmed
+      equipped: "equipped"
       damage: "1d6"
       rof: 2
       weaponSkill: brawling
       attackmod: 0
-      combatNumber: 5
       isRanged: false
   # --- CYBERWARE ---
   - _id: bf0cyber0007a000
@@ -193,7 +197,9 @@ items:
     system:
       description:
         value: "<p>Cyberaudio Suite with Audio Recorder for surveillance operations.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberAudioSuite
       isWeapon: false
       isFoundational: true
@@ -206,7 +212,9 @@ items:
     system:
       description:
         value: "<p>Cybereye with MicroVideo capability for visual recording.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberEye
       isWeapon: false
       isFoundational: true
@@ -219,7 +227,9 @@ items:
     system:
       description:
         value: "<p>Neural Link with Chipware Socket and Memory Chip for data storage.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: neuralWare
       isWeapon: false
       isFoundational: true
@@ -232,7 +242,9 @@ items:
     system:
       description:
         value: "<p>Skinweave providing SP 7.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareExternal
       isWeapon: false
       isFoundational: false
@@ -243,7 +255,9 @@ items:
     name: Skinweave
     type: armor
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       isEquipped: true
       bodyLocation:
         sp: 7

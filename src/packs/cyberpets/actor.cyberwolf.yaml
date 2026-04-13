@@ -182,13 +182,15 @@ items:
     name: "Combat Jaw (TUp Grapple Damage Bonus)"
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: vHeavyMelee
+      equipped: "equipped"
       damage: "4d6"
       rof: 1
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 12
       isRanged: false
       description:
         value: "<p>TUp: +1d6 damage vs target the Cyberwolf is grappling.</p>"
@@ -197,13 +199,15 @@ items:
     name: Claws
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: mediumMelee
+      equipped: "equipped"
       damage: "2d6"
       rof: 2
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 12
       isRanged: false
   # --- CYBERWARE ---
   - _id: bf0cyber0008a000
@@ -213,7 +217,9 @@ items:
     system:
       description:
         value: "<p>Combat Jaw with TUp providing +1d6 damage against grappled targets.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareExternal
       isWeapon: true
       isFoundational: true
@@ -225,7 +231,9 @@ items:
     system:
       description:
         value: "<p>Cyberaudio Suite with Internal Agent for pack communication and coordination.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberAudioSuite
       isWeapon: false
       isFoundational: true
@@ -238,7 +246,9 @@ items:
     system:
       description:
         value: "<p>Cybereye with Chyron display and Targeting Scope for enhanced pack tactics.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberEye
       isWeapon: false
       isFoundational: true
@@ -250,7 +260,9 @@ items:
     name: Light Armorjack
     type: armor
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       isEquipped: true
       bodyLocation:
         sp: 11

@@ -142,26 +142,30 @@ items:
     name: Combat Jaw
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: vHeavyMelee
+      equipped: "equipped"
       damage: "4d6"
       rof: 1
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 8
       isRanged: false
   - _id: bf0weap00002b000
     _key: "!items!bf0weap00002b000"
     name: Brawling Attack
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: unarmed
+      equipped: "equipped"
       damage: "1d6"
       rof: 2
       weaponSkill: brawling
       attackmod: 0
-      combatNumber: 5
       isRanged: false
   # --- CYBERWARE ---
   - _id: bf0cyber0002a000
@@ -171,7 +175,9 @@ items:
     system:
       description:
         value: "<p>Hydraulic jaw. Functions as a Very Heavy Melee Weapon (4d6 damage).</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareExternal
       isWeapon: true
       isFoundational: true
@@ -183,7 +189,9 @@ items:
     system:
       description:
         value: "<p>Hardened Shell providing SP 11 body protection. When Protection ability is active, extends to head.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareInternal
       isWeapon: false
       isFoundational: false
@@ -195,7 +203,9 @@ items:
     system:
       description:
         value: "<p>Once per day, as an Action, repair Skinweave or Subdermal Armor to full SP.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareInternal
       isWeapon: false
       isFoundational: false
@@ -206,7 +216,9 @@ items:
     name: Hardened Shell
     type: armor
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       isEquipped: true
       bodyLocation:
         sp: 11

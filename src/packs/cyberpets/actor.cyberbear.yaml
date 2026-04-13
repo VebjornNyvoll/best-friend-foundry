@@ -114,6 +114,8 @@ items:
       level: 2
       stat: dex
       category: fightingSkills
+      skillType: martialArt
+      difficulty: difficult
       basic: false
       core: false
   - _id: bf0skill00005g00
@@ -182,26 +184,30 @@ items:
     name: Bear Claw
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: heavyMelee
+      equipped: "equipped"
       damage: "3d6"
       rof: 2
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 16
       isRanged: false
   - _id: bf0weap00005b000
     _key: "!items!bf0weap00005b000"
     name: Combat Jaw
     type: weapon
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       weaponType: heavyMelee
+      equipped: "equipped"
       damage: "3d6"
       rof: 2
       weaponSkill: meleeWeapon
       attackmod: 0
-      combatNumber: 16
       isRanged: false
   # --- CYBERWARE ---
   - _id: bf0cyber0005a000
@@ -209,7 +215,9 @@ items:
     name: Combat Jaw
     type: cyberware
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareExternal
       isWeapon: true
       isFoundational: true
@@ -221,7 +229,9 @@ items:
     system:
       description:
         value: "<p>Grafted Muscle and Bone Lace. Increases BODY.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareInternal
       isWeapon: false
       isFoundational: false
@@ -233,7 +243,9 @@ items:
     system:
       description:
         value: "<p>Neural Link with Chipware Socket and Pain Editor. Ignores wound penalties.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: neuralWare
       isWeapon: false
       isFoundational: true
@@ -246,7 +258,9 @@ items:
     system:
       description:
         value: "<p>Subdermal Armor with TUp +2 SP (requires BODY 10), providing SP 13.</p>"
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       type: cyberwareInternal
       isWeapon: false
       isFoundational: false
@@ -257,7 +271,9 @@ items:
     name: "Subdermal Armor (TUp +2 SP)"
     type: armor
     system:
-      source: "Your New Best Friend"
+      source:
+        book: "Your New Best Friend"
+        page: 0
       isEquipped: true
       bodyLocation:
         sp: 13
