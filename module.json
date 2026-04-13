@@ -3,6 +3,8 @@
   "title": "Cyberpunk RED: Your New Best Friend",
   "description": "Adds the Your New Best Friend DLC content to Cyberpunk RED - 8 cyberpets, 7 new cyberware items, rules, adventure hooks, and full ability automation.",
   "version": "1.0.0",
+  "manifest": "https://raw.githubusercontent.com/VebjornNyvoll/best-friend-foundry/main/module.json",
+  "download": "https://github.com/VebjornNyvoll/best-friend-foundry/archive/refs/heads/main.zip",
   "authors": [
     {
       "name": "Best Friend Foundry"
