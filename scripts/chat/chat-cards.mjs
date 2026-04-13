@@ -7,7 +7,7 @@ import { onAirhypoVampyres, onAirhypoReload } from "../automation/airhypo-vampyr
 import { onRecovery, onThreeArmStrike, onThreeArmStrikeOption } from "../automation/cyberbear-martial.mjs";
 import { onProtection } from "../automation/protection.mjs";
 import { onCombatAwareness } from "../automation/combat-awareness.mjs";
-import { onTraumaNanomatrix } from "../automation/trauma-nanomatrix.mjs";
+import { onTraumaNanomatrix, onNanomatrixReset } from "../automation/trauma-nanomatrix.mjs";
 
 /**
  * Handlers mapped by data-action attribute value.
@@ -25,6 +25,7 @@ const ACTION_HANDLERS = {
   "cpred-bf-protection": onProtection,
   "cpred-bf-combat-awareness": onCombatAwareness,
   "cpred-bf-trauma-nanomatrix": onTraumaNanomatrix,
+  "cpred-bf-nanomatrix-reset": onNanomatrixReset,
 };
 
 /**

@@ -4,9 +4,24 @@
     <h3>Three-Arm Strike</h3>
   </div>
   <div class="card-body">
-    <div class="roll-result success">
-      Roll: {{rollResult}} ({{rollFormula}}) vs DV{{dv}} &mdash; Success!
+    {{#if rollTotal}}
+    <div class="roll-block">
+      {{#if rollBreakdown}}
+      <div class="roll-breakdown">{{rollBreakdown}} = <strong>{{rollTotal}}</strong></div>
+      {{/if}}
+      <div class="roll-die {{#if isCritSuccess}}crit-success{{/if}}{{#if isCritFail}}crit-fail{{/if}}">
+        <span class="die-face">{{dieResult}}</span>
+        {{#if isCritSuccess}}<span class="crit-label">CRIT!</span>{{/if}}
+        {{#if isCritFail}}<span class="crit-label">FUMBLE!</span>{{/if}}
+        {{#if isCrit}}
+        <span class="crit-extra">{{#if isCritSuccess}}+{{else}}&minus;{{/if}} {{critRoll}}</span>
+        {{/if}}
+      </div>
+      <div class="dv-check success">
+        {{rollTotal}} vs DV{{dv}} &mdash; <strong>Success!</strong>
+      </div>
     </div>
+    {{/if}}
 
     <p>Choose one effect:</p>
 

@@ -1,10 +1,8 @@
-import { getSelectedActor, getFlag, setFlag, sendAbilityCard } from "../utils.mjs";
+import { getSelectedActor, getFlag, setFlag, unsetFlag, sendAbilityCard } from "../utils.mjs";
 
 /**
  * Activate Trauma Response Nanomatrix.
  * Once per day, as an Action, repair Skinweave or Subdermal Armor to full SP.
- * Each additional installation increases daily uses by 1.
- * @param {object} [context] - Chat card button context
  */
 export async function onTraumaNanomatrix(context = {}) {
   const actor = context.actorId
@@ -16,15 +14,26 @@ export async function onTraumaNanomatrix(context = {}) {
     return;
   }
 
-  // Check daily usage (keyed by in-game day or session)
+  // Check daily usage
   const usedToday = getFlag(actor, "nanomatrixUsedToday") ?? false;
 
   if (usedToday) {
-    ui.notifications.warn(game.i18n.localize("CPRED_BF.chat.alreadyUsedToday"));
+    ui.notifications.warn("Trauma Response Nanomatrix has already been used today.");
+    // Show card with reset button for GM
+    await sendAbilityCard("ability-card.hbs", {
+      actorName: actor.name,
+      actorImg: actor.img,
+      abilityName: "Trauma Response Nanomatrix",
+      result: "Already used today. GM can reset daily uses below.",
+      showReset: true,
+      actorId: actor.id,
+    }, {
+      speaker: ChatMessage.getSpeaker({ actor }),
+    });
     return;
   }
 
-  // Find Skinweave or Subdermal Armor cyberware items
+  // Find Skinweave or Subdermal Armor items
   const armorItems = actor.items.filter((i) => {
     const n = i.name.toLowerCase();
     return (n.includes("skinweave") || n.includes("subdermal armor") || n.includes("hardened shell")) &&
@@ -41,7 +50,6 @@ export async function onTraumaNanomatrix(context = {}) {
   for (const item of armorItems) {
     const updates = {};
 
-    // Reset body SP to max
     if (item.system?.bodyLocation) {
       const maxSP = item.system.bodyLocation.maxSp ?? item.system.bodyLocation.sp ?? 0;
       updates["system.bodyLocation.sp"] = maxSP;
@@ -50,7 +58,6 @@ export async function onTraumaNanomatrix(context = {}) {
       }
     }
 
-    // Reset head SP to max
     if (item.system?.headLocation) {
       const maxSP = item.system.headLocation.maxSp ?? item.system.headLocation.sp ?? 0;
       updates["system.headLocation.sp"] = maxSP;
@@ -71,11 +78,35 @@ export async function onTraumaNanomatrix(context = {}) {
   await sendAbilityCard("ability-card.hbs", {
     actorName: actor.name,
     actorImg: actor.img,
-    abilityName: game.i18n.localize("CPRED_BF.abilities.traumaNanomatrix"),
-    description: game.i18n.localize("CPRED_BF.abilities.traumaNanomatrix.desc"),
-    result: `${game.i18n.localize("CPRED_BF.chat.armorRestored")} Restored: ${restoredItems.join(", ")}`,
+    abilityName: "Trauma Response Nanomatrix",
+    description: "Repairs Skinweave or Subdermal Armor to full SP. Once per day as an Action.",
+    result: `Armor restored to full SP: ${restoredItems.join(", ")}`,
     success: true,
+    showReset: true,
+    actorId: actor.id,
   }, {
+    speaker: ChatMessage.getSpeaker({ actor }),
+  });
+}
+
+/**
+ * Reset the daily Nanomatrix usage (GM action).
+ */
+export async function onNanomatrixReset(context = {}) {
+  const actor = context.actorId
+    ? game.actors.get(context.actorId)
+    : getSelectedActor();
+
+  if (!actor) return;
+
+  await unsetFlag(actor, "nanomatrixUsedToday");
+
+  await ChatMessage.create({
+    content: `<div class="cpred-bf-card">
+      <div class="card-body">
+        <p><strong>${actor.name}</strong>'s Trauma Response Nanomatrix daily uses have been reset.</p>
+      </div>
+    </div>`,
     speaker: ChatMessage.getSpeaker({ actor }),
   });
 }

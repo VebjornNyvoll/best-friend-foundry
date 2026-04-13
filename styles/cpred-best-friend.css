@@ -128,3 +128,104 @@
   border: 1px dashed #ff3333;
   margin-top: 6px;
 }
+
+/* ── CPR Roll Display ────────────────────────────── */
+
+.cpred-bf-card .roll-block {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #444;
+  border-radius: 3px;
+  padding: 6px 8px;
+  margin: 6px 0;
+  text-align: center;
+}
+
+.cpred-bf-card .roll-breakdown {
+  font-size: 11px;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.cpred-bf-card .roll-die {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.cpred-bf-card .roll-die .die-face {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #888;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+}
+
+.cpred-bf-card .roll-die.crit-success .die-face {
+  border-color: #33ff33;
+  color: #33ff33;
+  box-shadow: 0 0 8px rgba(51, 255, 51, 0.4);
+}
+
+.cpred-bf-card .roll-die.crit-fail .die-face {
+  border-color: #ff3333;
+  color: #ff3333;
+  box-shadow: 0 0 8px rgba(255, 51, 51, 0.4);
+}
+
+.cpred-bf-card .roll-die .crit-label {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cpred-bf-card .roll-die.crit-success .crit-label {
+  color: #33ff33;
+}
+
+.cpred-bf-card .roll-die.crit-fail .crit-label {
+  color: #ff3333;
+}
+
+.cpred-bf-card .roll-die .crit-extra {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.cpred-bf-card .dv-check {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+.cpred-bf-card .dv-check.success {
+  color: #33ff33;
+  background: rgba(51, 255, 51, 0.08);
+  border: 1px solid rgba(51, 255, 51, 0.3);
+}
+
+.cpred-bf-card .dv-check.failure {
+  color: #ff3333;
+  background: rgba(255, 51, 51, 0.08);
+  border: 1px solid rgba(255, 51, 51, 0.3);
+}
+
+.cpred-bf-card .damage-block {
+  background: rgba(255, 51, 51, 0.1);
+  border: 1px solid #ff3333;
+  border-radius: 2px;
+  padding: 4px 8px;
+  margin: 6px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #ff6666;
+}

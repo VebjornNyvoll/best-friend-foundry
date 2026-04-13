@@ -1,9 +1,8 @@
-import { getSelectedActor, getTargetedActor, rollDVCheck, rollDamage, sendAbilityCard } from "../utils.mjs";
+import { getSelectedActor, getTargetedActor, cprSkillCheck, cprAttackRoll, cprDamageRoll, applyHPDamage, formatRollDisplay, sendAbilityCard } from "../utils.mjs";
 
 /**
  * Cyberbear Martial Art: Recovery
  * When knocked prone, attempt DV13 Martial Arts to Get Up as a free action.
- * @param {object} [context] - Chat card button context
  */
 export async function onRecovery(context = {}) {
   const actor = context.actorId
@@ -15,29 +14,30 @@ export async function onRecovery(context = {}) {
     return;
   }
 
-  // Cyberbear's Martial Arts (Cyberbear) skill base is 10
-  // The roll is 1d10 + DEX + Martial Arts level
-  const dex = actor.system?.stats?.dex?.value ?? 8;
-  const martialSkill = actor.items.find(
-    (i) => i.type === "skill" && i.name.toLowerCase().includes("martial arts")
-  );
-  const skillLevel = martialSkill?.system?.level ?? 0;
-
-  // Use the skill base directly if available (Cyberbear has base 10)
-  const statPlusSkill = martialSkill ? skillLevel + dex : 10;
-  const roll = new Roll("1d10 + @base", { base: statPlusSkill });
-  await roll.evaluate();
-
-  const success = roll.total >= 13;
+  // DEX + Martial Arts (Cyberbear) vs DV13
+  const check = await cprSkillCheck(actor, "dex", "Martial Arts");
+  const dv = 13;
+  const success = check.total >= dv;
+  const display = formatRollDisplay(check.roll, {
+    statKey: check.statKey,
+    statValue: check.statValue,
+    skillName: check.skillName,
+    skillLevel: check.skillLevel,
+  });
 
   await sendAbilityCard("ability-card.hbs", {
     actorName: actor.name,
     actorImg: actor.img,
-    abilityName: game.i18n.localize("CPRED_BF.abilities.recovery"),
-    description: game.i18n.localize("CPRED_BF.abilities.recovery.desc"),
-    rollResult: roll.total,
-    rollFormula: roll.result,
-    dv: 13,
+    abilityName: "Recovery",
+    description: "When the Cyberbear uses the Get Up Action, it can attempt to beat DV13 with Martial Arts. On success, the Get Up didn't cost an Action.",
+    rollTotal: check.total,
+    rollBreakdown: display.breakdown,
+    dieResult: display.dieResult,
+    critRoll: display.critRoll,
+    isCritSuccess: display.isCritSuccess,
+    isCritFail: display.isCritFail,
+    isCrit: display.isCrit,
+    dv,
     success,
     result: success
       ? "Success! The Cyberbear Gets Up as a free action (no Action cost)."
@@ -50,8 +50,7 @@ export async function onRecovery(context = {}) {
 /**
  * Cyberbear Martial Art: Three-Arm Strike
  * After hitting the same target with two Bear Claw attacks, attempt DV15.
- * On success: choose one of four effects. On failure: 5 self-damage.
- * @param {object} [context] - Chat card button context
+ * On success: choose one of four effects. On failure: 5 self-damage from brain tumor.
  */
 export async function onThreeArmStrike(context = {}) {
   const actor = context.actorId
@@ -63,26 +62,30 @@ export async function onThreeArmStrike(context = {}) {
     return;
   }
 
-  const dex = actor.system?.stats?.dex?.value ?? 8;
-  const martialSkill = actor.items.find(
-    (i) => i.type === "skill" && i.name.toLowerCase().includes("martial arts")
-  );
-  const skillLevel = martialSkill?.system?.level ?? 0;
-  const statPlusSkill = martialSkill ? skillLevel + dex : 10;
-
-  const roll = new Roll("1d10 + @base", { base: statPlusSkill });
-  await roll.evaluate();
-
-  const success = roll.total >= 15;
+  // DEX + Martial Arts (Cyberbear) vs DV15
+  const check = await cprSkillCheck(actor, "dex", "Martial Arts");
+  const dv = 15;
+  const success = check.total >= dv;
+  const display = formatRollDisplay(check.roll, {
+    statKey: check.statKey,
+    statValue: check.statValue,
+    skillName: check.skillName,
+    skillLevel: check.skillLevel,
+  });
 
   if (success) {
-    // Show the four options
+    // Show the four options via martial-art-card template
     await sendAbilityCard("martial-art-card.hbs", {
       actorName: actor.name,
       actorImg: actor.img,
-      rollResult: roll.total,
-      rollFormula: roll.result,
-      dv: 15,
+      rollTotal: check.total,
+      rollBreakdown: display.breakdown,
+      dieResult: display.dieResult,
+      isCritSuccess: display.isCritSuccess,
+      isCritFail: display.isCritFail,
+      isCrit: display.isCrit,
+      critRoll: display.critRoll,
+      dv,
       success: true,
       actorId: actor.id,
       targetId: context.targetId ?? "",
@@ -90,22 +93,24 @@ export async function onThreeArmStrike(context = {}) {
       speaker: ChatMessage.getSpeaker({ actor }),
     });
   } else {
-    // Failure: 5 damage directly to Cyberbear's HP
-    const currentHP = actor.system?.derivedStats?.hp?.value ?? 0;
-    await actor.update({
-      "system.derivedStats.hp.value": Math.max(0, currentHP - 5),
-    });
+    // Failure: 5 damage directly to Cyberbear's HP from brain tumor
+    const { oldHP, newHP } = await applyHPDamage(actor, 5);
 
     await sendAbilityCard("ability-card.hbs", {
       actorName: actor.name,
       actorImg: actor.img,
-      abilityName: game.i18n.localize("CPRED_BF.abilities.threeArmStrike"),
-      rollResult: roll.total,
-      rollFormula: roll.result,
-      dv: 15,
+      abilityName: "Three-Arm Strike",
+      rollTotal: check.total,
+      rollBreakdown: display.breakdown,
+      dieResult: display.dieResult,
+      critRoll: display.critRoll,
+      isCritSuccess: display.isCritSuccess,
+      isCritFail: display.isCritFail,
+      isCrit: display.isCrit,
+      dv,
       success: false,
-      result: game.i18n.localize("CPRED_BF.chat.threeArmStrike.fail"),
       selfDamage: 5,
+      result: `Failed! The brain tumor causes ${actor.name} to suffer 5 damage directly to HP. (${oldHP} → ${newHP})`,
     }, {
       speaker: ChatMessage.getSpeaker({ actor }),
     });
@@ -114,7 +119,6 @@ export async function onThreeArmStrike(context = {}) {
 
 /**
  * Handle a Three-Arm Strike option selection.
- * @param {object} context - Chat card button context with option
  */
 export async function onThreeArmStrikeOption(context = {}) {
   const actor = context.actorId
@@ -136,18 +140,16 @@ export async function onThreeArmStrikeOption(context = {}) {
 
     case "extraAttack": {
       // Roll an additional Bear Claw or Combat Jaw attack
-      const attackRoll = new Roll("1d10 + 16"); // Combat Number 16
-      await attackRoll.evaluate();
-      const { total: dmg } = await rollDamage("3d6");
-      resultText = `${actor.name} attacks again! Attack: ${attackRoll.total} (${attackRoll.result}), Damage: ${dmg} (3d6)`;
+      const attack = await cprAttackRoll(16);
+      const damage = await cprDamageRoll("3d6");
+      const atkDisplay = formatRollDisplay(attack.roll);
+      resultText = `${actor.name} attacks again! Attack: ${attack.total} (${atkDisplay.breakdown}), Damage: ${damage.total} (${damage.result})`;
       break;
     }
 
     case "criticalInjury": {
-      // Roll on the Body Critical Injury table (2d6)
-      const critRoll = new Roll("2d6");
-      await critRoll.evaluate();
-      resultText = `${target?.name ?? "Target"} suffers a random Body Critical Injury! Roll result: ${critRoll.total} (${critRoll.result}). See CP:R page 187.`;
+      const critRoll = await cprDamageRoll("2d6");
+      resultText = `${target?.name ?? "Target"} suffers a random Body Critical Injury! Roll: ${critRoll.total} (${critRoll.result}). See CP:R page 187.`;
       break;
     }
 

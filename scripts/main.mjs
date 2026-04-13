@@ -5,10 +5,10 @@ import { onFlamebreath } from "./automation/flamebreath.mjs";
 import { onAcidSecretion } from "./automation/acid-secretion.mjs";
 import { onVenomFangs } from "./automation/venom-fangs.mjs";
 import { onAirhypoVampyres } from "./automation/airhypo-vampyres.mjs";
-import { onRecovery, onThreeArmStrike } from "./automation/cyberbear-martial.mjs";
+import { onRecovery, onThreeArmStrike, onThreeArmStrikeOption } from "./automation/cyberbear-martial.mjs";
 import { onProtection } from "./automation/protection.mjs";
 import { onCombatAwareness } from "./automation/combat-awareness.mjs";
-import { onTraumaNanomatrix } from "./automation/trauma-nanomatrix.mjs";
+import { onTraumaNanomatrix, onNanomatrixReset } from "./automation/trauma-nanomatrix.mjs";
 import { handleChatButtons } from "./chat/chat-cards.mjs";
 
 Hooks.once("init", () => {
@@ -33,9 +33,11 @@ Hooks.once("init", () => {
       airhypoVampyres: onAirhypoVampyres,
       recovery: onRecovery,
       threeArmStrike: onThreeArmStrike,
+      threeArmStrikeOption: onThreeArmStrikeOption,
       protection: onProtection,
       combatAwareness: onCombatAwareness,
       traumaNanomatrix: onTraumaNanomatrix,
+      nanomatrixReset: onNanomatrixReset,
     };
   }
 });

@@ -1,10 +1,9 @@
-import { getSelectedActor, getTargetedActor, sendAbilityCard } from "../utils.mjs";
+import { getSelectedActor, getTargetedActor, cprAttackRoll, formatRollDisplay, sendAbilityCard } from "../utils.mjs";
 
 /**
  * Activate the Neon Newt's Acid Secretion ability.
  * On a successful attack, lowers the SP of all worn armor on the target by 1.
- * Does not deal damage itself.
- * @param {object} [context] - Chat card button context
+ * Does not deal damage itself. Combat Number 5.
  */
 export async function onAcidSecretion(context = {}) {
   const actor = context.actorId
@@ -25,9 +24,15 @@ export async function onAcidSecretion(context = {}) {
     return;
   }
 
-  // Roll the attack: Combat Number 5 (1d10 + 5)
-  const attackRoll = new Roll("1d10 + 5");
-  await attackRoll.evaluate();
+  // Attack roll: d10 (with crits) + Combat Number 5
+  const attack = await cprAttackRoll(5);
+  const attackDisplay = formatRollDisplay(attack.roll);
+
+  // GM compares attack total to target's evasion — we display the result
+  // and provide a button/note. For simplicity, we show the total and let
+  // the GM confirm the hit, but also auto-apply the SP reduction since
+  // the macro is explicitly triggered on a hit.
+  // The card shows the roll so the GM can adjudicate.
 
   // Find all equipped armor on the target and reduce SP by 1
   const armorUpdates = [];
@@ -56,14 +61,17 @@ export async function onAcidSecretion(context = {}) {
   await sendAbilityCard("ability-card.hbs", {
     actorName: actor.name,
     actorImg: actor.img,
-    abilityName: game.i18n.localize("CPRED_BF.abilities.acidSecretion"),
-    description: game.i18n.localize("CPRED_BF.abilities.acidSecretion.desc"),
-    attackTotal: attackRoll.total,
-    attackRoll: attackRoll.result,
+    targetName: target.name,
+    abilityName: "Acid Secretion",
+    description: "On a successful attack, the acid lowers the SP of all worn armor on the target by 1. It does not deal damage.",
+    attackTotal: attack.total,
+    attackBreakdown: `Combat Number 5 + ${attackDisplay.breakdown} = ${attack.total}`,
+    attackDieResult: attackDisplay.dieResult,
+    attackCritSuccess: attack.roll.isCritSuccess,
+    attackCritFail: attack.roll.isCritFail,
     result: armorUpdates.length > 0
       ? `Acid reduced SP by 1 on: ${armorNames}`
       : "No armor to degrade.",
-    targetName: target.name,
   }, {
     speaker: ChatMessage.getSpeaker({ actor }),
   });

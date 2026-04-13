@@ -1,5 +1,7 @@
 const MODULE_ID = "cpred-best-friend";
 
+// ── Actor / Token Helpers ───────────────────────────────────────────
+
 /**
  * Get the selected actor from canvas tokens or the user's character.
  * @returns {Actor|null}
@@ -27,33 +29,113 @@ export function getTargetedActor() {
   return targets[0]?.actor ?? null;
 }
 
+// ── CPR-Compatible Roll Helpers ─────────────────────────────────────
+
 /**
- * Roll a stat + skill check against a DV.
- * @param {number} statValue - The stat value
- * @param {number} skillValue - The skill level
- * @param {number} dv - The difficulty value
- * @returns {Promise<{roll: Roll, total: number, success: boolean}>}
+ * Roll 1d10 with CPR critical handling.
+ * - Natural 10: roll another d10, ADD to total (critical success)
+ * - Natural 1: roll another d10, SUBTRACT from total (critical failure)
+ *
+ * @returns {Promise<{total: number, initialRoll: number, critRoll: number,
+ *   isCritSuccess: boolean, isCritFail: boolean}>}
  */
-export async function rollDVCheck(statValue, skillValue, dv) {
-  const roll = new Roll("1d10 + @stat + @skill", { stat: statValue, skill: skillValue });
-  await roll.evaluate();
+export async function cprRoll() {
+  const baseRoll = await new Roll("1d10").evaluate();
+  const initialRoll = baseRoll.total;
+
+  let critRoll = 0;
+  let isCritSuccess = false;
+  let isCritFail = false;
+
+  if (initialRoll === 10) {
+    isCritSuccess = true;
+    const extra = await new Roll("1d10").evaluate();
+    critRoll = extra.total;
+  } else if (initialRoll === 1) {
+    isCritFail = true;
+    const extra = await new Roll("1d10").evaluate();
+    critRoll = extra.total;
+  }
+
+  // Crit success adds, crit fail subtracts
+  const total = isCritFail
+    ? initialRoll - critRoll
+    : initialRoll + critRoll;
+
+  return { total, initialRoll, critRoll, isCritSuccess, isCritFail };
+}
+
+/**
+ * Perform a CPR skill check: d10 (with crits) + stat + skill.
+ *
+ * @param {Actor} actor - The acting actor
+ * @param {string} statKey - Key in actor.system.stats (e.g. "dex", "will", "cool")
+ * @param {string} skillName - Skill name to find in actor's items (partial match, case-insensitive)
+ * @returns {Promise<{total: number, statValue: number, skillLevel: number,
+ *   statKey: string, skillName: string, roll: object, success: boolean, dv: number|null}>}
+ */
+export async function cprSkillCheck(actor, statKey, skillName) {
+  const statValue = actor.system?.stats?.[statKey]?.value ?? 0;
+
+  const skillItem = actor.items.find(
+    (i) => i.type === "skill" && i.name.toLowerCase().includes(skillName.toLowerCase())
+  );
+  const skillLevel = skillItem?.system?.level ?? 0;
+
+  const roll = await cprRoll();
+  const total = roll.total + statValue + skillLevel;
+
   return {
+    total,
+    statValue,
+    skillLevel,
+    statKey,
+    skillName: skillItem?.name ?? skillName,
     roll,
-    total: roll.total,
-    success: roll.total >= dv,
+    // DV comparison is done by caller — we just provide the total
+    success: null,
+    dv: null,
   };
 }
 
 /**
- * Roll damage dice.
- * @param {string} formula - Dice formula like "2d6" or "1d6"
- * @returns {Promise<{roll: Roll, total: number}>}
+ * Perform a CPR attack roll: d10 (with crits) + flat combat number.
+ *
+ * @param {number} combatNumber - The weapon/ability combat number
+ * @returns {Promise<{total: number, combatNumber: number, roll: object}>}
  */
-export async function rollDamage(formula) {
-  const roll = new Roll(formula);
-  await roll.evaluate();
-  return { roll, total: roll.total };
+export async function cprAttackRoll(combatNumber) {
+  const roll = await cprRoll();
+  const total = roll.total + combatNumber;
+  return { total, combatNumber, roll };
 }
+
+/**
+ * Roll damage dice (no crit handling — CPR damage doesn't crit).
+ *
+ * @param {string} formula - Dice formula like "3d6" or "1d6"
+ * @returns {Promise<{total: number, formula: string, result: string}>}
+ */
+export async function cprDamageRoll(formula) {
+  const roll = await new Roll(formula).evaluate();
+  return { total: roll.total, formula, result: roll.result };
+}
+
+/**
+ * Apply damage directly to an actor's HP.
+ *
+ * @param {Actor} actor - Target actor
+ * @param {number} amount - Damage to deal
+ * @returns {Promise<{oldHP: number, newHP: number}>}
+ */
+export async function applyHPDamage(actor, amount) {
+  const oldHP = actor.system?.derivedStats?.hp?.value ?? 0;
+  const newHP = Math.max(0, oldHP - amount);
+  await actor.update({ "system.derivedStats.hp.value": newHP });
+  return { oldHP, newHP };
+}
+
+// ── Flag Helpers ────────────────────────────────────────────────────
 
 /**
  * Get a flag value from an actor.
@@ -84,6 +166,8 @@ export async function unsetFlag(actor, key) {
   return actor.unsetFlag(MODULE_ID, key);
 }
 
+// ── Combat / Measurement Helpers ────────────────────────────────────
+
 /**
  * Get the current combat round, or null if no combat.
  * @returns {number|null}
@@ -103,6 +187,8 @@ export function measureDistance(tokenA, tokenB) {
   return canvas.grid.measureDistances([{ ray }], { gridSpaces: true })[0];
 }
 
+// ── Armor Helpers ───────────────────────────────────────────────────
+
 /**
  * Find all equipped armor items on an actor.
  * @param {Actor} actor
@@ -110,14 +196,43 @@ export function measureDistance(tokenA, tokenB) {
  */
 export function getEquippedArmor(actor) {
   return actor.items.filter(
-    (i) => (i.type === "armor" || i.type === "cyberware") &&
-      i.system?.isEquipped !== false
+    (i) => i.type === "armor" && i.system?.isEquipped !== false
   );
+}
+
+// ── Chat Card Helpers ───────────────────────────────────────────────
+
+/**
+ * Format a CPR roll result for display in chat cards.
+ * Returns an object with pre-formatted display strings.
+ *
+ * @param {object} roll - Result from cprRoll()
+ * @param {object} [opts] - Optional stat/skill info
+ * @returns {object} Display-ready roll data
+ */
+export function formatRollDisplay(roll, opts = {}) {
+  const parts = [];
+  if (opts.statKey) parts.push(`${opts.statKey.toUpperCase()} ${opts.statValue}`);
+  if (opts.skillName) parts.push(`${opts.skillName} ${opts.skillLevel}`);
+
+  let dieText = `d10 [${roll.initialRoll}]`;
+  if (roll.isCritSuccess) dieText += ` + d10 [${roll.critRoll}]`;
+  if (roll.isCritFail) dieText += ` − d10 [${roll.critRoll}]`;
+  parts.push(dieText);
+
+  return {
+    breakdown: parts.join(" + "),
+    dieResult: roll.initialRoll,
+    critRoll: roll.critRoll,
+    isCritSuccess: roll.isCritSuccess,
+    isCritFail: roll.isCritFail,
+    isCrit: roll.isCritSuccess || roll.isCritFail,
+  };
 }
 
 /**
  * Create and send a module chat message using a Handlebars template.
- * @param {string} template - Template path relative to module
+ * @param {string} template - Template filename (relative to module templates/chat/)
  * @param {object} data - Template data
  * @param {object} [options] - ChatMessage creation options
  * @returns {Promise<ChatMessage>}

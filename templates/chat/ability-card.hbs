@@ -7,30 +7,72 @@
     {{#if actorName}}<p><strong>{{actorName}}</strong>{{#if targetName}} &rarr; {{targetName}}{{/if}}</p>{{/if}}
     {{#if description}}<p>{{description}}</p>{{/if}}
 
+    {{!-- CPR-style roll display with crit handling --}}
+    {{#if rollTotal}}
+    <div class="roll-block">
+      {{#if rollBreakdown}}
+      <div class="roll-breakdown">{{rollBreakdown}} = <strong>{{rollTotal}}</strong></div>
+      {{/if}}
+      <div class="roll-die {{#if isCritSuccess}}crit-success{{/if}}{{#if isCritFail}}crit-fail{{/if}}">
+        <span class="die-face">{{dieResult}}</span>
+        {{#if isCritSuccess}}<span class="crit-label">CRIT!</span>{{/if}}
+        {{#if isCritFail}}<span class="crit-label">FUMBLE!</span>{{/if}}
+        {{#if isCrit}}
+        <span class="crit-extra">{{#if isCritSuccess}}+{{else}}&minus;{{/if}} {{critRoll}}</span>
+        {{/if}}
+      </div>
+      {{#if dv}}
+      <div class="dv-check {{#if success}}success{{else}}failure{{/if}}">
+        {{rollTotal}} vs DV{{dv}} &mdash; {{#if success}}<strong>Success!</strong>{{else}}<strong>Failed!</strong>{{/if}}
+      </div>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    {{!-- Attack roll (for weapon-style attacks) --}}
     {{#if attackTotal}}
-    <div class="roll-result">
-      Attack: {{attackTotal}} ({{attackRoll}})
+    <div class="roll-block">
+      <div class="roll-breakdown">{{attackBreakdown}}</div>
+      <div class="roll-die {{#if attackCritSuccess}}crit-success{{/if}}{{#if attackCritFail}}crit-fail{{/if}}">
+        <span class="die-face">{{attackDieResult}}</span>
+        {{#if attackCritSuccess}}<span class="crit-label">CRIT!</span>{{/if}}
+        {{#if attackCritFail}}<span class="crit-label">FUMBLE!</span>{{/if}}
+      </div>
+      <div class="roll-result">Attack Total: <strong>{{attackTotal}}</strong></div>
     </div>
     {{/if}}
 
-    {{#if rollResult}}
-    <div class="roll-result {{#if success}}success{{else}}failure{{/if}}">
-      Roll: {{rollResult}} ({{rollFormula}}) vs DV{{dv}} &mdash; {{#if success}}Success!{{else}}Failed!{{/if}}
+    {{!-- Damage roll --}}
+    {{#if damageTotal}}
+    <div class="damage-block">
+      Damage: <strong>{{damageTotal}}</strong> ({{damageFormula}})
     </div>
     {{/if}}
 
+    {{!-- Free-text result --}}
     {{#if result}}<p>{{{result}}}</p>{{/if}}
 
+    {{!-- Self-damage indicator --}}
     {{#if selfDamage}}
     <div class="damage-self">
       Self-damage: {{selfDamage}} HP (brain tumor feedback)
     </div>
     {{/if}}
 
+    {{!-- Reload button (Airhypo) --}}
     {{#if showReload}}
     <div class="card-buttons">
       <button data-action="cpred-bf-airhypo-reload" data-actor-id="{{actorId}}" class="full-width">
         Reload Airhypo ({{doses}}/{{maxDoses}})
+      </button>
+    </div>
+    {{/if}}
+
+    {{!-- Reset button (Nanomatrix) --}}
+    {{#if showReset}}
+    <div class="card-buttons">
+      <button data-action="cpred-bf-nanomatrix-reset" data-actor-id="{{actorId}}" class="full-width">
+        Reset Daily Uses
       </button>
     </div>
     {{/if}}
