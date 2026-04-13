@@ -1,0 +1,242 @@
+_id: bf0actor0000004
+_key: "!actors!bf0actor0000004"
+name: "Obsidian Ocelot\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/obsidian-ocelot.webp
+prototypeToken:
+  name: "Obsidian Ocelot\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/obsidian-ocelot.webp
+    scaleX: 1
+    scaleY: 1
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 3
+    ref:
+      value: 9
+    dex:
+      value: 8
+    tech:
+      value: 2
+    cool:
+      value: 2
+    will:
+      value: 4
+    luck:
+      value: 0
+    move:
+      value: 8
+    body:
+      value: 5
+    emp:
+      value: 2
+  derivedStats:
+    hp:
+      value: 40
+      max: 40
+    seriouslyWounded: 20
+    deathSave:
+      value: 5
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Obsidian Ocelot\u2122</strong> &mdash; Cost: 4,000eb (Luxury) | Required Lifestyle: Fresh Food | Cyberware Slots: 3 | Level: Hardened Lieutenant</p><p>Beautifully bred for high-end customers, these perfect cyberpreds are both gorgeous ornaments and stealthy killers waiting to be unleashed. Most Obsidian Ocelots are kept out of the public eye and pampered endlessly. A select few are trained to accompany assassins you couldn't afford to hire.</p><p><strong>Combat Awareness:</strong> While an Obsidian Ocelot is not technically a Solo, it can use the Combat Awareness Role Ability (see CP:R page 146) at Rank 5.</p>"
+    level: hardenedLieutenant
+  roleInfo:
+    roles: []
+    abilities: "Combat Awareness Rank 5: Functions as the Combat Awareness Role Ability at Rank 5."
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00004a
+    _key: "!items!bf0skill00004a"
+    name: Athletics
+    type: skill
+    system:
+      level: 8
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00004b
+    _key: "!items!bf0skill00004b"
+    name: Brawling
+    type: skill
+    system:
+      level: 5
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00004c
+    _key: "!items!bf0skill00004c"
+    name: Endurance
+    type: skill
+    system:
+      level: 3
+      stat: will
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00004d
+    _key: "!items!bf0skill00004d"
+    name: Evasion
+    type: skill
+    system:
+      level: 7
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00004e
+    _key: "!items!bf0skill00004e"
+    name: Human Perception
+    type: skill
+    system:
+      level: 6
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00004f
+    _key: "!items!bf0skill00004f"
+    name: Perception
+    type: skill
+    system:
+      level: 9
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00004g
+    _key: "!items!bf0skill00004g"
+    name: Stealth
+    type: skill
+    system:
+      level: 7
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00004h
+    _key: "!items!bf0skill00004h"
+    name: Tactics
+    type: skill
+    system:
+      level: 9
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00004i
+    _key: "!items!bf0skill00004i"
+    name: Tracking
+    type: skill
+    system:
+      level: 10
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00004j
+    _key: "!items!bf0skill00004j"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 7
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00004a
+    _key: "!items!bf0weap00004a"
+    name: Combat Jaw
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: vHeavyMelee
+      damage: "4d6"
+      rof: 1
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 15
+      isRanged: false
+  - _id: bf0weap00004b
+    _key: "!items!bf0weap00004b"
+    name: Cat Claws
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: heavyMelee
+      damage: "3d6"
+      rof: 2
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 15
+      isRanged: false
+  # --- CYBERWARE ---
+  - _id: bf0cyber0004a
+    _key: "!items!bf0cyber0004a"
+    name: Combat Jaw
+    type: cyberware
+    system:
+      source: "Your New Best Friend"
+      type: externalBody
+      isWeapon: true
+      isFoundational: true
+      isInstalled: true
+  - _id: bf0cyber0004b
+    _key: "!items!bf0cyber0004b"
+    name: "FBC Chameleon Coating (TUp Animal Compatibility)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Cloak that hides from all visual senses (DV17 Perception to spot). Must remain still for 1 minute to activate.</p>"
+      source: "Your New Best Friend"
+      type: externalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  - _id: bf0cyber0004c
+    _key: "!items!bf0cyber0004c"
+    name: "Subdermal Armor (TUp +1 SP)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Subdermal Armor with TUp +1 SP, providing SP 12.</p>"
+      source: "Your New Best Friend"
+      type: internalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  # --- ARMOR ---
+  - _id: bf0armor0004a
+    _key: "!items!bf0armor0004a"
+    name: "Subdermal Armor (TUp +1 SP)"
+    type: armor
+    system:
+      source: "Your New Best Friend"
+      isEquipped: true
+      bodyLocation:
+        sp: 12
+        maxSp: 12
+        ablation: 0
+      headLocation:
+        sp: 12
+        maxSp: 12
+        ablation: 0
+      penalty: 0
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

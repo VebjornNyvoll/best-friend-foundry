@@ -1,0 +1,37 @@
+_id: bf0cyberware006
+_key: "!items!bf0cyberware006"
+name: Homing Tracer Cyberfinger
+type: cyberware
+img: modules/cpred-best-friend/assets/icons/items/homing-tracer-finger.webp
+system:
+  description:
+    value: "<p>Cyberfinger. Requires a Modular Finger Cyberhand. Cyberfinger that can point in the direction of its linked tracer if it is within 1 mile (1.6 km) away. Typically sold with an easily removable fingernail linked tracer. Sometimes, a couple will trade tracer fingernails so they can find each other easily at a crowded party. Replacement fingernail tracers are 50eb (Costly).</p>"
+    chat: ""
+    unpiped: ""
+  favorite: false
+  source: "Your New Best Friend"
+  type: cyberArm
+  isWeapon: false
+  isFoundational: false
+  humanityLoss:
+    static: 0
+    roll: "1d6"
+  price:
+    market: 500
+    category: expensive
+  install: mall
+  concealable:
+    concealable: true
+    isConcealed: false
+  slots: 1
+  installedItems:
+    allowed: false
+    slots: 0
+    list: []
+  isInstalled: false
+  isElectronic: true
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

@@ -1,0 +1,37 @@
+_id: bf0cyberware005
+_key: "!items!bf0cyberware005"
+name: Hardened Cybereye Casing
+type: cyberware
+img: modules/cpred-best-friend/assets/icons/items/hardened-casing.webp
+system:
+  description:
+    value: "<p>Cybereye Option. Cybereye's internals are hardened to military standards. Cybereye and installed options cannot be rendered disabled, inoperable, or destroyed by electric shock, microwaver or EMP pulses, or any Non-Black ICE program effect.</p>"
+    chat: ""
+    unpiped: ""
+  favorite: false
+  source: "Your New Best Friend"
+  type: cybereye
+  isWeapon: false
+  isFoundational: false
+  humanityLoss:
+    static: 0
+    roll: "1d6"
+  price:
+    market: 500
+    category: expensive
+  install: clinic
+  concealable:
+    concealable: false
+    isConcealed: false
+  slots: 1
+  installedItems:
+    allowed: false
+    slots: 0
+    list: []
+  isInstalled: false
+  isElectronic: false
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

@@ -1,0 +1,37 @@
+_id: bf0cyberware007
+_key: "!items!bf0cyberware007"
+name: Trauma Response Nanomatrix
+type: cyberware
+img: modules/cpred-best-friend/assets/icons/items/trauma-nanomatrix.webp
+system:
+  description:
+    value: "<p>Internal Body Cyberware. Once per day, as an Action, activate to repair your Skinweave or Subdermal Armor to full SP. Requires Skinweave or Subdermal Armor. Each additional installation increases daily uses by 1.</p>"
+    chat: ""
+    unpiped: ""
+  favorite: false
+  source: "Your New Best Friend"
+  type: internalBody
+  isWeapon: false
+  isFoundational: false
+  humanityLoss:
+    static: 0
+    roll: "2d6"
+  price:
+    market: 1000
+    category: veryExpensive
+  install: hospital
+  concealable:
+    concealable: false
+    isConcealed: false
+  slots: 0
+  installedItems:
+    allowed: false
+    slots: 0
+    list: []
+  isInstalled: false
+  isElectronic: false
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

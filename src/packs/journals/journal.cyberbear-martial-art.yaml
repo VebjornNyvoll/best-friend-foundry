@@ -1,0 +1,17 @@
+_id: bf0journal00003
+_key: "!journal!bf0journal00003"
+name: "Cyberbear Martial Art"
+img: modules/cpred-best-friend/assets/icons/actors/cyberbear.webp
+pages:
+  - _id: bf0jpage000008
+    _key: "!journal.pages!bf0journal00003.bf0jpage000008"
+    name: "Cyberbear Martial Art"
+    type: text
+    text:
+      content: "<h2>Cyberbear Martial Art</h2><p>As an unintended side effect of their creation, Cyberbears fight unlike any other creature on earth. While impossible to learn, duplicate, or imitate, their innate combat ability acts like a Martial Art with the following Special Moves.</p><h3>Recovery</h3><p><strong>Requirement:</strong> The bear is knocked prone.</p><p>Whenever the bear uses the Get Up Action, they can attempt to beat a <strong>DV13</strong> with the Martial Arts Special Move Resolution. If they succeed, that Get Up Action didn't cost an Action.</p><h3>Three-Arm Strike</h3><p><strong>Requirement:</strong> The Cyberbear hits the same target with two Bear Claw attacks this turn.</p><p>Once per Turn when the bear fulfills this requirement, they can use the Martial Arts Special Move Resolution to attempt to beat a <strong>DV15</strong>. If they succeed, they may choose <strong>one</strong> of the following effects. However, should they fail, the tumor in their brain causes them to immediately suffer <strong>5 damage directly to their HP</strong>.</p><ul><li>The bear can either <strong>grapple or end a grapple</strong> with their last hit target.</li><li>The bear can <strong>attack their last hit target again</strong> with either a Bear Claw or Combat Jaw.</li><li>The bear can cause their target to suffer a <strong>random Body Critical Injury</strong> (see CP:R page 187).</li><li>The bear can <strong>reduce the SP of all their last hit target's worn armor by 4</strong>.</li></ul>"
+      format: 1
+    sort: 100000
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

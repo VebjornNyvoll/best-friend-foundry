@@ -1,0 +1,17 @@
+_id: bf0macro000006
+_key: "!macros!bf0macro000006"
+name: "Three-Arm Strike (Cyberbear)"
+type: script
+scope: global
+img: icons/skills/melee/strike-paw-bear-brown.webp
+command: |-
+  const mod = game.modules.get("cpred-best-friend");
+  if (!mod?.api?.threeArmStrike) {
+    ui.notifications.error("Your New Best Friend module is not active.");
+    return;
+  }
+  await mod.api.threeArmStrike();
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

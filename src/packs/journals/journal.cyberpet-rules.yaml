@@ -1,0 +1,33 @@
+_id: bf0journal00001
+_key: "!journal!bf0journal00001"
+name: "Cyberpet Rules"
+img: modules/cpred-best-friend/assets/icons/actors/datarabbit.webp
+pages:
+  - _id: bf0jpage000001
+    _key: "!journal.pages!bf0journal00001.bf0jpage000001"
+    name: "Keeping a Cyberpet"
+    type: text
+    text:
+      content: "<h2>Keeping a Cyberpet</h2><p>Buying a Cyberpet isn't cheap, and keeping one isn't cheap, either.</p><p>First, you've got to find one &mdash; they're a hot commodity, so call a Fixer. Once you pony up the cash, you'll need to keep your Cyberpet happy, which means buying it food, performing regular maintenance, and providing adequate space and housing.</p><h3>Lifestyle Costs</h3><p>In game terms, that means paying for your new pet's <strong>Lifestyle</strong> (see CP:R page 377) &mdash; that's right, you've gotta pay monthly for its Lifestyle in addition to your own. There's no cheating this cost. If you buy a Cyberpet in the middle of the month or during character generation, you've gotta pay for a full month of lifestyle. It is not prorated.</p><h3>Housing</h3><p>Your pet also needs a place to sleep, and that counts toward the capacity of your <strong>Housing</strong> (see CP:R page 377):</p><ul><li><strong>Mook-level</strong> pets do not take up much space and do not require an additional bed.</li><li><strong>Lieutenants</strong> take up one bed's worth of space.</li><li><strong>Mini-Boss</strong> takes up two beds' worth of space.</li><li><strong>Boss-level</strong> takes up 3 beds' worth of space.</li></ul><p>Also, check with your landlord. Even if they allow pets, don't expect them to be chill with you keeping a bear in your apartment.</p>"
+      format: 1
+    sort: 100000
+  - _id: bf0jpage000002
+    _key: "!journal.pages!bf0journal00001.bf0jpage000002"
+    name: "Training a Cyberpet"
+    type: text
+    text:
+      content: "<h2>Training a Cyberpet</h2><p>Convincing a Cyberpet to obey requires actual skill on your part.</p><h3>Animal Handling Requirements</h3><p>If your <strong>Animal Handling Base (INT + Animal Handling)</strong> is less than 10, the animal will not obey your commands and will act as the GM decides.</p><p>If your Animal Handling Base is 10 or higher, your Cyberpet will love you, fight alongside you, and follow your commands to the best of its ability. However, this is contingent upon its care.</p><h3>Consequences of Neglect</h3><p>If you haven't maintained your pet's Lifestyle, if it hasn't slept properly because of a lack of proper housing due to being crammed, or if you have mistreated your pet and betrayed its trust, the GM determines the pet's behavior. It can run away, refuse to obey a command, or even turn on you in a rage.</p><p>If such a situation arises, the GM may allow an Animal Handling Check to regain control of the Cyberpet, but this is a temporary measure. If you don't invest time, energy, care, and money into your pet immediately, it will go rogue again.</p>"
+      format: 1
+    sort: 200000
+  - _id: bf0jpage000003
+    _key: "!journal.pages!bf0journal00001.bf0jpage000003"
+    name: "Cybering a Cyberpet"
+    type: text
+    text:
+      content: "<h2>Cybering a Cyberpet</h2><p>Implanting more cyberware into a Cyberpet is done with the same DVs as doing so in a human, but you're not gonna be able to go into just any hospital and find someone who can help you put a cyberarm on a rat.</p><h3>Medtech Requirements</h3><p>You'll need to find a <strong>Medtech with Science (Biology) 4 or higher</strong> and a specialized facility (as determined by the GM). Otherwise, the operation will fail and your Cyberpet won't make it out alive.</p><h3>Cyberware Compatibility</h3><p>Almost all cyberware designed for humans can be found in animal-compatible configurations. Animal cyberware, however, is <strong>species-specific</strong>. You can't take cyberware from one species and install it in another without a Tech Upgrade specifically allowing cross-species compatibility. Even then, <strong>size matters</strong>. No matter how much you Tech Upgrade it, a bear's cybereye won't fit into a rat's eye socket.</p><h3>Tech Upgrades</h3><p>A Cyberpet cannot be Tech Upgraded to allow for additional slots, but a Tech can Tech Upgrade <strong>one (and only one)</strong> piece of cyberware to take up 0 slots in a Cyberpet.</p><p>Uninstalling a piece of cyberware that was part of the pet's base set does not give them extra slots, but uninstalling cyberware that was installed after purchase does.</p><h3>Training for New Cyberware</h3><p>Training a Cyberpet to understand and use newly installed cyberware takes <strong>a day of training</strong> and has an <strong>Animal Handling DV equal to Installation DV</strong>. Failure does not turn the Cyberpet against you, but the lack of adjustment means they will be unable to do more than eat and sleep until you try again and succeed.</p>"
+      format: 1
+    sort: 300000
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

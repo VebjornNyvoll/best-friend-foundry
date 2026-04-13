@@ -1,0 +1,41 @@
+_id: bf0journal00002
+_key: "!journal!bf0journal00002"
+name: "Cyberpet Adventure Hooks"
+img: modules/cpred-best-friend/assets/icons/actors/cyberbear.webp
+pages:
+  - _id: bf0jpage000004
+    _key: "!journal.pages!bf0journal00002.bf0jpage000004"
+    name: "It Came From the Sewers"
+    type: text
+    text:
+      content: "<h2>It Came From the Sewers</h2><p>Rumors of a monster under Night City have everyone on high alert.</p>"
+      format: 1
+    sort: 100000
+  - _id: bf0jpage000005
+    _key: "!journal.pages!bf0journal00002.bf0jpage000005"
+    name: "Too Good to Be True"
+    type: text
+    text:
+      content: "<h2>Too Good to Be True</h2><p>A shipping container, thought to be full of electronic parts, is actually holding a Cyberbear.</p>"
+      format: 1
+    sort: 200000
+  - _id: bf0jpage000006
+    _key: "!journal.pages!bf0journal00002.bf0jpage000006"
+    name: "Head of Security"
+    type: text
+    text:
+      content: "<h2>Head of Security</h2><p>A corporate insider within Biotechnica, feeling guilty about the deaths caused by the Cyberpet+ line, reaches out for protection as she leaves the company. An assassin is trying to silence her before she can blow the lid on the whole plot.</p>"
+      format: 1
+    sort: 300000
+  - _id: bf0jpage000007
+    _key: "!journal.pages!bf0journal00002.bf0jpage000007"
+    name: "Critter Combat"
+    type: text
+    text:
+      content: "<h2>Critter Combat</h2><p>An underground Cyberpet fighting ring has been uncovered. The gang responsible must be taken down. Caution: A dangerous number of Cyberwolves are aggressively loyal to their master, the ring leader Michele Vex.</p>"
+      format: 1
+    sort: 400000
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

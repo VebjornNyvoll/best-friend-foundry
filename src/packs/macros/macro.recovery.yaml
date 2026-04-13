@@ -1,0 +1,17 @@
+_id: bf0macro000005
+_key: "!macros!bf0macro000005"
+name: "Recovery (Cyberbear)"
+type: script
+scope: global
+img: icons/skills/movement/figure-running-gray.webp
+command: |-
+  const mod = game.modules.get("cpred-best-friend");
+  if (!mod?.api?.recovery) {
+    ui.notifications.error("Your New Best Friend module is not active.");
+    return;
+  }
+  await mod.api.recovery();
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

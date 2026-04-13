@@ -1,0 +1,275 @@
+_id: bf0actor0000005
+_key: "!actors!bf0actor0000005"
+name: "Cyberbear\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/cyberbear.webp
+prototypeToken:
+  name: "Cyberbear\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/cyberbear.webp
+    scaleX: 1.5
+    scaleY: 1.5
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 3
+    ref:
+      value: 8
+    dex:
+      value: 8
+    tech:
+      value: 6
+    cool:
+      value: 5
+    will:
+      value: 8
+    luck:
+      value: 0
+    move:
+      value: 6
+    body:
+      value: 10
+    emp:
+      value: 5
+  derivedStats:
+    hp:
+      value: 55
+      max: 55
+    seriouslyWounded: 28
+    deathSave:
+      value: 10
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Cyberbear\u2122</strong> &mdash; Cost: 20,000eb (Super Luxury) | Required Lifestyle: Fresh Food x2 | Cyberware Slots: 3 | Level: Mini-Boss</p><p>The Cyberbear does one thing very well: ripping meat to shreds. To make matters worse, some have escaped, and they've already found a niche up north in the free state of Alaska's Yukon Valley. Rumor has it their bioengineering has filled their brains with tumors, making them feral.</p><p><strong>Cyberbear Martial Art:</strong></p><p><strong>Recovery:</strong> Whenever the bear uses the Get Up Action, they can attempt to beat a DV13 with the Martial Arts Special Move Resolution. If they succeed, that Get Up Action didn't cost an Action.</p><p><strong>Three-Arm Strike:</strong> Once per Turn when the bear hits the same target with two Bear Claw attacks, they can attempt DV15. Success: choose one effect (grapple, extra attack, random Body Critical Injury, or reduce armor SP by 4). Failure: suffer 5 damage directly to HP from brain tumor.</p>"
+    level: miniBoss
+  roleInfo:
+    roles: []
+    abilities: "Cyberbear Martial Art: Recovery (DV13 free Get Up) and Three-Arm Strike (DV15 after two claw hits, four options on success, 5 self-damage on failure)."
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00005a
+    _key: "!items!bf0skill00005a"
+    name: Athletics
+    type: skill
+    system:
+      level: 6
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005b
+    _key: "!items!bf0skill00005b"
+    name: Brawling
+    type: skill
+    system:
+      level: 8
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005c
+    _key: "!items!bf0skill00005c"
+    name: Concentration
+    type: skill
+    system:
+      level: 2
+      stat: will
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00005d
+    _key: "!items!bf0skill00005d"
+    name: Evasion
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005e
+    _key: "!items!bf0skill00005e"
+    name: Human Perception
+    type: skill
+    system:
+      level: 2
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005f
+    _key: "!items!bf0skill00005f"
+    name: "Martial Arts (Cyberbear)"
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: fightingSkills
+      basic: false
+      core: false
+  - _id: bf0skill00005g
+    _key: "!items!bf0skill00005g"
+    name: Melee Weapon
+    type: skill
+    system:
+      level: 8
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005h
+    _key: "!items!bf0skill00005h"
+    name: Perception
+    type: skill
+    system:
+      level: 8
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005i
+    _key: "!items!bf0skill00005i"
+    name: Persuasion
+    type: skill
+    system:
+      level: 2
+      stat: cool
+      category: socialSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005j
+    _key: "!items!bf0skill00005j"
+    name: Resist Torture/Drugs
+    type: skill
+    system:
+      level: 10
+      stat: will
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00005k
+    _key: "!items!bf0skill00005k"
+    name: Stealth
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00005l
+    _key: "!items!bf0skill00005l"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 11
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00005a
+    _key: "!items!bf0weap00005a"
+    name: Bear Claw
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: heavyMelee
+      damage: "3d6"
+      rof: 2
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 16
+      isRanged: false
+  - _id: bf0weap00005b
+    _key: "!items!bf0weap00005b"
+    name: Combat Jaw
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: heavyMelee
+      damage: "3d6"
+      rof: 2
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 16
+      isRanged: false
+  # --- CYBERWARE ---
+  - _id: bf0cyber0005a
+    _key: "!items!bf0cyber0005a"
+    name: Combat Jaw
+    type: cyberware
+    system:
+      source: "Your New Best Friend"
+      type: externalBody
+      isWeapon: true
+      isFoundational: true
+      isInstalled: true
+  - _id: bf0cyber0005b
+    _key: "!items!bf0cyber0005b"
+    name: Grafted Muscle & Bone Lace
+    type: cyberware
+    system:
+      description:
+        value: "<p>Grafted Muscle and Bone Lace. Increases BODY.</p>"
+      source: "Your New Best Friend"
+      type: internalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  - _id: bf0cyber0005c
+    _key: "!items!bf0cyber0005c"
+    name: "Neural Link w/ Chipware Socket & Pain Editor"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Neural Link with Chipware Socket and Pain Editor. Ignores wound penalties.</p>"
+      source: "Your New Best Friend"
+      type: neuralLink
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: true
+  - _id: bf0cyber0005d
+    _key: "!items!bf0cyber0005d"
+    name: "Subdermal Armor (TUp +2 SP, Requires BODY 10)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Subdermal Armor with TUp +2 SP (requires BODY 10), providing SP 13.</p>"
+      source: "Your New Best Friend"
+      type: internalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  # --- ARMOR ---
+  - _id: bf0armor0005a
+    _key: "!items!bf0armor0005a"
+    name: "Subdermal Armor (TUp +2 SP)"
+    type: armor
+    system:
+      source: "Your New Best Friend"
+      isEquipped: true
+      bodyLocation:
+        sp: 13
+        maxSp: 13
+        ablation: 0
+      headLocation:
+        sp: 13
+        maxSp: 13
+        ablation: 0
+      penalty: 0
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

@@ -1,0 +1,261 @@
+_id: bf0actor0000007
+_key: "!actors!bf0actor0000007"
+name: "Cyberrat\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/cyberrat.webp
+prototypeToken:
+  name: "Cyberrat\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/cyberrat.webp
+    scaleX: 0.6
+    scaleY: 0.6
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 3
+    ref:
+      value: 6
+    dex:
+      value: 8
+    tech:
+      value: 3
+    cool:
+      value: 2
+    will:
+      value: 4
+    luck:
+      value: 0
+    move:
+      value: 9
+    body:
+      value: 3
+    emp:
+      value: 2
+  derivedStats:
+    hp:
+      value: 10
+      max: 10
+    seriouslyWounded: 5
+    deathSave:
+      value: 5
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Cyberrat\u2122</strong> &mdash; Cost: 1,000eb (Very Expensive) | Required Lifestyle: Generic Prepak | Cyberware Slots: 2 | Level: Mook</p><p>A bio-enhanced, venomous rat bred to be used in corporate espionage. Freshly equipped with enhanced surveillance cyberware and fitted with skinweave, this Cyberpet makes a great expendable operative or a best friend who can keep an eye on your apartment.</p><p><strong>Venom Fangs/Claws:</strong> When a Cyberrat successfully attacks with its Venom Fangs/Claws (even if it does no damage) the target must beat a DV13 Resist Torture/Drugs Check or be dealt 1d6 additional damage directly to their HP.</p>"
+    level: mook
+  roleInfo:
+    roles: []
+    abilities: "Venom Fangs/Claws: On hit, target must beat DV13 Resist Torture/Drugs or take 1d6 HP damage."
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00007a
+    _key: "!items!bf0skill00007a"
+    name: Athletics
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00007b
+    _key: "!items!bf0skill00007b"
+    name: Brawling
+    type: skill
+    system:
+      level: -3
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00007c
+    _key: "!items!bf0skill00007c"
+    name: Concentration
+    type: skill
+    system:
+      level: 4
+      stat: will
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00007d
+    _key: "!items!bf0skill00007d"
+    name: Endurance
+    type: skill
+    system:
+      level: -2
+      stat: will
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00007e
+    _key: "!items!bf0skill00007e"
+    name: Evasion
+    type: skill
+    system:
+      level: 4
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00007f
+    _key: "!items!bf0skill00007f"
+    name: Human Perception
+    type: skill
+    system:
+      level: 6
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00007g
+    _key: "!items!bf0skill00007g"
+    name: Melee Weapon
+    type: skill
+    system:
+      level: 4
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00007h
+    _key: "!items!bf0skill00007h"
+    name: Perception
+    type: skill
+    system:
+      level: 7
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00007i
+    _key: "!items!bf0skill00007i"
+    name: Stealth
+    type: skill
+    system:
+      level: 7
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00007j
+    _key: "!items!bf0skill00007j"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 7
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00007a
+    _key: "!items!bf0weap00007a"
+    name: Venom Fangs/Claws
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: lightMelee
+      damage: "1d6"
+      rof: 2
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 12
+      isRanged: false
+      description:
+        value: "<p>On hit, target must beat DV13 Resist Torture/Drugs or take 1d6 additional damage directly to HP.</p>"
+  - _id: bf0weap00007b
+    _key: "!items!bf0weap00007b"
+    name: Brawling Attack
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: unarmed
+      damage: "1d6"
+      rof: 2
+      weaponSkill: brawling
+      attackmod: 0
+      combatNumber: 5
+      isRanged: false
+  # --- CYBERWARE ---
+  - _id: bf0cyber0007a
+    _key: "!items!bf0cyber0007a"
+    name: "Cyberaudio Suite w/ Audio Recorder"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Cyberaudio Suite with Audio Recorder for surveillance operations.</p>"
+      source: "Your New Best Friend"
+      type: cyberAudioSuite
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: true
+  - _id: bf0cyber0007b
+    _key: "!items!bf0cyber0007b"
+    name: "Cybereye w/ MicroVideo"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Cybereye with MicroVideo capability for visual recording.</p>"
+      source: "Your New Best Friend"
+      type: cybereye
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: true
+  - _id: bf0cyber0007c
+    _key: "!items!bf0cyber0007c"
+    name: "Neural Link w/ Chipware Socket & Memory Chip"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Neural Link with Chipware Socket and Memory Chip for data storage.</p>"
+      source: "Your New Best Friend"
+      type: neuralLink
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: true
+  - _id: bf0cyber0007d
+    _key: "!items!bf0cyber0007d"
+    name: Skinweave
+    type: cyberware
+    system:
+      description:
+        value: "<p>Skinweave providing SP 7.</p>"
+      source: "Your New Best Friend"
+      type: externalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  # --- ARMOR ---
+  - _id: bf0armor0007a
+    _key: "!items!bf0armor0007a"
+    name: Skinweave
+    type: armor
+    system:
+      source: "Your New Best Friend"
+      isEquipped: true
+      bodyLocation:
+        sp: 7
+        maxSp: 7
+        ablation: 0
+      headLocation:
+        sp: 7
+        maxSp: 7
+        ablation: 0
+      penalty: 0
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

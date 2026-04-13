@@ -1,0 +1,17 @@
+_id: bf0macro000001
+_key: "!macros!bf0macro000001"
+name: "Flamebreath (Neon Newt)"
+type: script
+scope: global
+img: icons/magic/fire/beam-jet-stream-yellow.webp
+command: |-
+  const mod = game.modules.get("cpred-best-friend");
+  if (!mod?.api?.flamebreath) {
+    ui.notifications.error("Your New Best Friend module is not active.");
+    return;
+  }
+  await mod.api.flamebreath();
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

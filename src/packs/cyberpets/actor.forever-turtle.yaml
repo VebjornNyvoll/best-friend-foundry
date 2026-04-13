@@ -1,0 +1,224 @@
+_id: bf0actor0000002
+_key: "!actors!bf0actor0000002"
+name: "Forever Turtle\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/forever-turtle.webp
+prototypeToken:
+  name: "Forever Turtle\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/forever-turtle.webp
+    scaleX: 0.8
+    scaleY: 0.8
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 2
+    ref:
+      value: 2
+    dex:
+      value: 3
+    tech:
+      value: 2
+    cool:
+      value: 3
+    will:
+      value: 4
+    luck:
+      value: 0
+    move:
+      value: 3
+    body:
+      value: 2
+    emp:
+      value: 2
+  derivedStats:
+    hp:
+      value: 15
+      max: 15
+    seriouslyWounded: 7
+    deathSave:
+      value: 2
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Forever Turtle\u2122</strong> &mdash; Cost: 2,000eb (Very Expensive) | Required Lifestyle: Good Prepak | Cyberware Slots: 2 | Level: Hardened Mook</p><p>One of the original Cyberpets. The Forever Turtle comes equipped with a Trauma Response Nanomatrix to ensure longevity. Twenty years of research and development and DNA spliced from more than six species have turned this once cute Cyberpet into an unsettling testudine amalgamation.</p><p><strong>Protection:</strong> A Forever Turtle can draw its head and limbs into its shell. When it does so, the protection of its Hardened Shell extends to its head and it cannot be targeted by Aimed Shots.</p>"
+    level: hardenedMook
+  roleInfo:
+    roles: []
+    abilities: "Protection: Draw into shell to extend Hardened Shell SP to head. Cannot be targeted by Aimed Shots while withdrawn."
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00002a
+    _key: "!items!bf0skill00002a"
+    name: Athletics
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00002b
+    _key: "!items!bf0skill00002b"
+    name: Brawling
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00002c
+    _key: "!items!bf0skill00002c"
+    name: Evasion
+    type: skill
+    system:
+      level: 9
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00002d
+    _key: "!items!bf0skill00002d"
+    name: Human Perception
+    type: skill
+    system:
+      level: 6
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00002e
+    _key: "!items!bf0skill00002e"
+    name: Melee Weapon
+    type: skill
+    system:
+      level: 5
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00002f
+    _key: "!items!bf0skill00002f"
+    name: Perception
+    type: skill
+    system:
+      level: 8
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00002g
+    _key: "!items!bf0skill00002g"
+    name: Stealth
+    type: skill
+    system:
+      level: 7
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00002h
+    _key: "!items!bf0skill00002h"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 8
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00002a
+    _key: "!items!bf0weap00002a"
+    name: Combat Jaw
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: vHeavyMelee
+      damage: "4d6"
+      rof: 1
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 8
+      isRanged: false
+  - _id: bf0weap00002b
+    _key: "!items!bf0weap00002b"
+    name: Brawling Attack
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: unarmed
+      damage: "1d6"
+      rof: 2
+      weaponSkill: brawling
+      attackmod: 0
+      combatNumber: 5
+      isRanged: false
+  # --- CYBERWARE ---
+  - _id: bf0cyber0002a
+    _key: "!items!bf0cyber0002a"
+    name: Combat Jaw
+    type: cyberware
+    system:
+      description:
+        value: "<p>Hydraulic jaw. Functions as a Very Heavy Melee Weapon (4d6 damage).</p>"
+      source: "Your New Best Friend"
+      type: externalBody
+      isWeapon: true
+      isFoundational: true
+      isInstalled: true
+  - _id: bf0cyber0002b
+    _key: "!items!bf0cyber0002b"
+    name: Hardened Shell (Subdermal Armor)
+    type: cyberware
+    system:
+      description:
+        value: "<p>Hardened Shell providing SP 11 body protection. When Protection ability is active, extends to head.</p>"
+      source: "Your New Best Friend"
+      type: internalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  - _id: bf0cyber0002c
+    _key: "!items!bf0cyber0002c"
+    name: Trauma Response Nanomatrix
+    type: cyberware
+    system:
+      description:
+        value: "<p>Once per day, as an Action, repair Skinweave or Subdermal Armor to full SP.</p>"
+      source: "Your New Best Friend"
+      type: internalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  # --- ARMOR ---
+  - _id: bf0armor0002a
+    _key: "!items!bf0armor0002a"
+    name: Hardened Shell
+    type: armor
+    system:
+      source: "Your New Best Friend"
+      isEquipped: true
+      bodyLocation:
+        sp: 11
+        maxSp: 11
+        ablation: 0
+      headLocation:
+        sp: 0
+        maxSp: 0
+        ablation: 0
+      penalty: 0
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

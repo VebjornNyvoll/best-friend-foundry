@@ -1,0 +1,230 @@
+_id: bf0actor0000001
+_key: "!actors!bf0actor0000001"
+name: "Datarabbit\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/datarabbit.webp
+prototypeToken:
+  name: "Datarabbit\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  prependAdjective: false
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/datarabbit.webp
+    scaleX: 0.8
+    scaleY: 0.8
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 2
+    ref:
+      value: 8
+    dex:
+      value: 8
+    tech:
+      value: 2
+    cool:
+      value: 2
+    will:
+      value: 2
+    luck:
+      value: 0
+    move:
+      value: 10
+    body:
+      value: 3
+    emp:
+      value: 2
+  derivedStats:
+    hp:
+      value: 10
+      max: 10
+    seriouslyWounded: 5
+    deathSave:
+      value: 5
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Datarabbit\u2122</strong> &mdash; Cost: 1,000eb (Very Expensive) | Required Lifestyle: Generic Prepak | Cyberware Slots: 2</p><p>A biologically engineered data-carrier. This pet's eye is an EMP-protected storage locker for holding sensitive memory chips. With its naturally fast speed and mobility, the rabbit can be released to keep data safe and located later using implanted tracking cyberware when the danger is long gone.</p>"
+    level: mook
+  roleInfo:
+    roles: []
+    abilities: ""
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00001a
+    _key: "!items!bf0skill00001a"
+    name: Athletics
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00001b
+    _key: "!items!bf0skill00001b"
+    name: Endurance
+    type: skill
+    system:
+      level: 6
+      stat: will
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00001c
+    _key: "!items!bf0skill00001c"
+    name: Evasion
+    type: skill
+    system:
+      level: 4
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00001d
+    _key: "!items!bf0skill00001d"
+    name: Human Perception
+    type: skill
+    system:
+      level: 6
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00001e
+    _key: "!items!bf0skill00001e"
+    name: Perception
+    type: skill
+    system:
+      level: 8
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00001f
+    _key: "!items!bf0skill00001f"
+    name: Stealth
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00001g
+    _key: "!items!bf0skill00001g"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 8
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00001a
+    _key: "!items!bf0weap00001a"
+    name: Teeth
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: lightMelee
+      damage: "2d6"
+      rof: 2
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 8
+      isRanged: false
+      magazine:
+        value: 0
+        max: 0
+      fireModes:
+        singleShot: false
+        autofire: false
+        suppressive: false
+  - _id: bf0weap00001b
+    _key: "!items!bf0weap00001b"
+    name: Brawling Attack
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: unarmed
+      damage: "1d6"
+      rof: 2
+      weaponSkill: brawling
+      attackmod: 0
+      combatNumber: 8
+      isRanged: false
+      magazine:
+        value: 0
+        max: 0
+      fireModes:
+        singleShot: false
+        autofire: false
+        suppressive: false
+  # --- CYBERWARE ---
+  - _id: bf0cyber0001a
+    _key: "!items!bf0cyber0001a"
+    name: "Homing Tracer Cyberfinger (TUp Independent Mounting)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>TUp (Independent Mounting) Homing Tracer Cyberfinger. Points in the direction of its linked tracer within 1 mile.</p>"
+      source: "Your New Best Friend"
+      type: cyberArm
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  - _id: bf0cyber0001b
+    _key: "!items!bf0cyber0001b"
+    name: "Cybereye w/ Chipware Compartment & Hardened Casing"
+    type: cyberware
+    system:
+      description:
+        value: "<p>TUp (+1 Option Slot) Cybereye with Chipware Compartment (conceals up to 4 chipware) and Hardened Cybereye Casing (immune to EMP/electric/microwaver).</p>"
+      source: "Your New Best Friend"
+      type: cybereye
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: false
+  - _id: bf0cyber0001c
+    _key: "!items!bf0cyber0001c"
+    name: Subdermal Armor
+    type: cyberware
+    system:
+      description:
+        value: "<p>Subdermal Armor providing SP 11 to body and head.</p>"
+      source: "Your New Best Friend"
+      type: internalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  # --- ARMOR ---
+  - _id: bf0armor0001a
+    _key: "!items!bf0armor0001a"
+    name: Subdermal Armor
+    type: armor
+    system:
+      source: "Your New Best Friend"
+      isEquipped: true
+      bodyLocation:
+        sp: 11
+        maxSp: 11
+        ablation: 0
+      headLocation:
+        sp: 11
+        maxSp: 11
+        ablation: 0
+      penalty: 0
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

@@ -1,0 +1,269 @@
+_id: bf0actor0000006
+_key: "!actors!bf0actor0000006"
+name: "Cyberboa\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/cyberboa.webp
+prototypeToken:
+  name: "Cyberboa\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/cyberboa.webp
+    scaleX: 1
+    scaleY: 1
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 3
+    ref:
+      value: 5
+    dex:
+      value: 9
+    tech:
+      value: 3
+    cool:
+      value: 4
+    will:
+      value: 4
+    luck:
+      value: 0
+    move:
+      value: 4
+    body:
+      value: 7
+    emp:
+      value: 1
+  derivedStats:
+    hp:
+      value: 40
+      max: 40
+    seriouslyWounded: 20
+    deathSave:
+      value: 7
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Cyberboa\u2122</strong> &mdash; Cost: 4,000eb (Luxury) | Required Lifestyle: Fresh Food | Cyberware Slots: 3 | Level: Hardened Lieutenant</p><p>Designed and marketed as a search and rescue operative, what Biotechnica actually released with the Cyberboa was a serpent combining the DNA of all the world's most dangerous snakes in a single creature. No Cyberpet better exemplifies Nicolo Loggagia's concept of 'better survival through biochemistry' than the Cyberboa.</p><p><strong>Airhypo Vampyres:</strong> When a Cyberboa successfully attacks with its Vampyres (even if it does no damage), its Airhypo Vampyres pump a dose of a loaded substance into the target. A compartment concealed in the Cyberboa's mouth can load up to 5 doses of a single Biotoxin, Poison, or Streetdrug.</p>"
+    level: hardenedLieutenant
+  roleInfo:
+    roles: []
+    abilities: "Airhypo Vampyres: On Vampyres hit, injects a dose of loaded substance. Holds 5 doses of a single Biotoxin, Poison, or Street Drug."
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00006a
+    _key: "!items!bf0skill00006a"
+    name: Athletics
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00006b
+    _key: "!items!bf0skill00006b"
+    name: Brawling
+    type: skill
+    system:
+      level: 7
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00006c
+    _key: "!items!bf0skill00006c"
+    name: Contortionist
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00006d
+    _key: "!items!bf0skill00006d"
+    name: Endurance
+    type: skill
+    system:
+      level: 1
+      stat: will
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00006e
+    _key: "!items!bf0skill00006e"
+    name: Evasion
+    type: skill
+    system:
+      level: 5
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00006f
+    _key: "!items!bf0skill00006f"
+    name: Human Perception
+    type: skill
+    system:
+      level: 1
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00006g
+    _key: "!items!bf0skill00006g"
+    name: Melee Weapon
+    type: skill
+    system:
+      level: 6
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00006h
+    _key: "!items!bf0skill00006h"
+    name: Perception
+    type: skill
+    system:
+      level: 7
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00006i
+    _key: "!items!bf0skill00006i"
+    name: Stealth
+    type: skill
+    system:
+      level: 4
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00006j
+    _key: "!items!bf0skill00006j"
+    name: Tracking
+    type: skill
+    system:
+      level: 7
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00006k
+    _key: "!items!bf0skill00006k"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 9
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00006a
+    _key: "!items!bf0weap00006a"
+    name: "Vampyres (TUp Airhypo)"
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: lightMelee
+      damage: "1d6"
+      rof: 2
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 15
+      isRanged: false
+      description:
+        value: "<p>On hit, Airhypo injects a dose of loaded substance (5 dose capacity).</p>"
+  - _id: bf0weap00006b
+    _key: "!items!bf0weap00006b"
+    name: Brawling Attack
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: unarmed
+      damage: "3d6"
+      rof: 2
+      weaponSkill: brawling
+      attackmod: 0
+      combatNumber: 16
+      isRanged: false
+  # --- CYBERWARE ---
+  - _id: bf0cyber0006a
+    _key: "!items!bf0cyber0006a"
+    name: "Flashbulb (TUp Third Eye Mounted)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Flashbulb mounted via Third Eye TUp. Forces DV15 Resist Torture/Drugs or Damaged Eye Critical for 1 minute.</p>"
+      source: "Your New Best Friend"
+      type: externalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  - _id: bf0cyber0006b
+    _key: "!items!bf0cyber0006b"
+    name: "Neural Link w/ Chipware Socket & Pain Editor"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Neural Link with Chipware Socket and Pain Editor. Ignores wound penalties.</p>"
+      source: "Your New Best Friend"
+      type: neuralLink
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: true
+  - _id: bf0cyber0006c
+    _key: "!items!bf0cyber0006c"
+    name: "Subdermal Armor (TUp +1 SP)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Subdermal Armor with TUp +1 SP, providing SP 12.</p>"
+      source: "Your New Best Friend"
+      type: internalBody
+      isWeapon: false
+      isFoundational: false
+      isInstalled: true
+  - _id: bf0cyber0006d
+    _key: "!items!bf0cyber0006d"
+    name: "Vampyres (TUp Airhypo)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Vampyres with Airhypo TUp. On successful attack, injects a dose of loaded substance. Holds 5 doses of a single Biotoxin, Poison, or Street Drug.</p>"
+      source: "Your New Best Friend"
+      type: cyberArm
+      isWeapon: true
+      isFoundational: false
+      isInstalled: true
+  # --- ARMOR ---
+  - _id: bf0armor0006a
+    _key: "!items!bf0armor0006a"
+    name: "Subdermal Armor (TUp +1 SP)"
+    type: armor
+    system:
+      source: "Your New Best Friend"
+      isEquipped: true
+      bodyLocation:
+        sp: 12
+        maxSp: 12
+        ablation: 0
+      headLocation:
+        sp: 12
+        maxSp: 12
+        ablation: 0
+      penalty: 0
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

@@ -1,0 +1,37 @@
+_id: bf0cyberware003
+_key: "!items!bf0cyberware003"
+name: FBC Chameleon Coating
+type: cyberware
+img: modules/cpred-best-friend/assets/icons/items/fbc-chameleon-coating.webp
+system:
+  description:
+    value: "<p>External Body Cyberware. May only be installed in a Full Body Conversion. When the user remains still for 1 minute (20 rounds), they can activate a cloak that hides from all visual senses, including Low Light/Infrared/UV, unless the perceiver succeeds at a DV17 Perception Check. Activating the cloak does not require an Action. The cloak is deactivated automatically if the user moves further than 2 m/yds (1 square) within 3 seconds (1 Round). A second installation reduces the still time to 30 seconds (10 Rounds). A third installation reduces it to 9 seconds (3 Rounds). Further installations do nothing.</p>"
+    chat: ""
+    unpiped: ""
+  favorite: false
+  source: "Your New Best Friend"
+  type: externalBody
+  isWeapon: false
+  isFoundational: false
+  humanityLoss:
+    static: 0
+    roll: "2d6"
+  price:
+    market: 1000
+    category: veryExpensive
+  install: hospital
+  concealable:
+    concealable: false
+    isConcealed: false
+  slots: 0
+  installedItems:
+    allowed: false
+    slots: 0
+    list: []
+  isInstalled: false
+  isElectronic: false
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

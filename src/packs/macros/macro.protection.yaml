@@ -1,0 +1,17 @@
+_id: bf0macro000007
+_key: "!macros!bf0macro000007"
+name: "Protection (Forever Turtle)"
+type: script
+scope: global
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal.webp
+command: |-
+  const mod = game.modules.get("cpred-best-friend");
+  if (!mod?.api?.protection) {
+    ui.notifications.error("Your New Best Friend module is not active.");
+    return;
+  }
+  await mod.api.protection();
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

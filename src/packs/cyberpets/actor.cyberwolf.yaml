@@ -1,0 +1,268 @@
+_id: bf0actor0000008
+_key: "!actors!bf0actor0000008"
+name: "Cyberwolf\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/cyberwolf.webp
+prototypeToken:
+  name: "Cyberwolf\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/cyberwolf.webp
+    scaleX: 1
+    scaleY: 1
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 3
+    ref:
+      value: 7
+    dex:
+      value: 8
+    tech:
+      value: 2
+    cool:
+      value: 2
+    will:
+      value: 4
+    luck:
+      value: 0
+    move:
+      value: 7
+    body:
+      value: 5
+    emp:
+      value: 2
+  derivedStats:
+    hp:
+      value: 40
+      max: 40
+    seriouslyWounded: 20
+    deathSave:
+      value: 5
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Cyberwolf\u2122</strong> &mdash; Cost: 4,000eb (Luxury) | Required Lifestyle: Good Prepak | Cyberware Slots: 3 | Level: Hardened Lieutenant</p><p>Cyber-enhanced pack hunters created to be the new top of the food chain. Each Custom Security Canine is enhanced with cyberware to improve the efficiency of the pack and state-of-the-art hydraulic jaws engineered for close-quarters bone breaking. Typically found in a pack, though some are sold and trained for solo use as Custom Security Canines. Each comes with a free, custom-fitted Light Armorjack.</p><p><strong>Combat Awareness:</strong> While a Cyberwolf is not technically a Solo, it can use the Combat Awareness Role Ability (see CP:R page 146) at Rank 3 so long as it is within 20 m/yds of another Cyberwolf in its pack.</p>"
+    level: hardenedLieutenant
+  roleInfo:
+    roles: []
+    abilities: "Combat Awareness Rank 3: Functions as the Combat Awareness Role Ability at Rank 3, only while within 20 m/yds of another Cyberwolf in its pack."
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00008a
+    _key: "!items!bf0skill00008a"
+    name: Athletics
+    type: skill
+    system:
+      level: 5
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00008b
+    _key: "!items!bf0skill00008b"
+    name: Brawling
+    type: skill
+    system:
+      level: 6
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00008c
+    _key: "!items!bf0skill00008c"
+    name: Concentration
+    type: skill
+    system:
+      level: -2
+      stat: will
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00008d
+    _key: "!items!bf0skill00008d"
+    name: Endurance
+    type: skill
+    system:
+      level: 4
+      stat: will
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00008e
+    _key: "!items!bf0skill00008e"
+    name: Evasion
+    type: skill
+    system:
+      level: 5
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00008f
+    _key: "!items!bf0skill00008f"
+    name: Human Perception
+    type: skill
+    system:
+      level: 6
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00008g
+    _key: "!items!bf0skill00008g"
+    name: Melee Weapon
+    type: skill
+    system:
+      level: 4
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00008h
+    _key: "!items!bf0skill00008h"
+    name: Perception
+    type: skill
+    system:
+      level: 7
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00008i
+    _key: "!items!bf0skill00008i"
+    name: Stealth
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00008j
+    _key: "!items!bf0skill00008j"
+    name: Tactics
+    type: skill
+    system:
+      level: 11
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00008k
+    _key: "!items!bf0skill00008k"
+    name: Tracking
+    type: skill
+    system:
+      level: 13
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  - _id: bf0skill00008l
+    _key: "!items!bf0skill00008l"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 9
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00008a
+    _key: "!items!bf0weap00008a"
+    name: "Combat Jaw (TUp Grapple Damage Bonus)"
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: vHeavyMelee
+      damage: "4d6"
+      rof: 1
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 12
+      isRanged: false
+      description:
+        value: "<p>TUp: +1d6 damage vs target the Cyberwolf is grappling.</p>"
+  - _id: bf0weap00008b
+    _key: "!items!bf0weap00008b"
+    name: Claws
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: mediumMelee
+      damage: "2d6"
+      rof: 2
+      weaponSkill: meleeWeapon
+      attackmod: 0
+      combatNumber: 12
+      isRanged: false
+  # --- CYBERWARE ---
+  - _id: bf0cyber0008a
+    _key: "!items!bf0cyber0008a"
+    name: "Combat Jaw (TUp +1d6 Grapple Damage)"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Combat Jaw with TUp providing +1d6 damage against grappled targets.</p>"
+      source: "Your New Best Friend"
+      type: externalBody
+      isWeapon: true
+      isFoundational: true
+      isInstalled: true
+  - _id: bf0cyber0008b
+    _key: "!items!bf0cyber0008b"
+    name: "Cyberaudio Suite w/ Internal Agent"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Cyberaudio Suite with Internal Agent for pack communication and coordination.</p>"
+      source: "Your New Best Friend"
+      type: cyberAudioSuite
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: true
+  - _id: bf0cyber0008c
+    _key: "!items!bf0cyber0008c"
+    name: "Cybereye w/ Chyron & Targeting Scope"
+    type: cyberware
+    system:
+      description:
+        value: "<p>Cybereye with Chyron display and Targeting Scope for enhanced pack tactics.</p>"
+      source: "Your New Best Friend"
+      type: cybereye
+      isWeapon: false
+      isFoundational: true
+      isInstalled: true
+      isElectronic: true
+  # --- ARMOR ---
+  - _id: bf0armor0008a
+    _key: "!items!bf0armor0008a"
+    name: Light Armorjack
+    type: armor
+    system:
+      source: "Your New Best Friend"
+      isEquipped: true
+      bodyLocation:
+        sp: 11
+        maxSp: 11
+        ablation: 0
+      headLocation:
+        sp: 0
+        maxSp: 0
+        ablation: 0
+      penalty: 0
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

@@ -1,0 +1,37 @@
+_id: bf0cyberware004
+_key: "!items!bf0cyberware004"
+name: Flashbulb
+type: cyberware
+img: modules/cpred-best-friend/assets/icons/items/flashbulb.webp
+system:
+  description:
+    value: "<p>Cyberarm Option. Requires 2 Option Slots. As an Action, a user can force a target with functional meat eyes or cyberoptics within 25 m/yds to make a DV15 Resist Torture/Drugs Check. No Check is required for this Action. If the target fails, they suffer the Damaged Eye Critical Injury for 1 minute. Sufficient protection, such as an Anti-Dazzle Cybereye option, protects against this effect.</p>"
+    chat: ""
+    unpiped: ""
+  favorite: false
+  source: "Your New Best Friend"
+  type: cyberArm
+  isWeapon: false
+  isFoundational: false
+  humanityLoss:
+    static: 0
+    roll: "2d6"
+  price:
+    market: 500
+    category: expensive
+  install: clinic
+  concealable:
+    concealable: false
+    isConcealed: false
+  slots: 2
+  installedItems:
+    allowed: false
+    slots: 0
+    list: []
+  isInstalled: false
+  isElectronic: true
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

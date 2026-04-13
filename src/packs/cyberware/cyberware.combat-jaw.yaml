@@ -1,0 +1,51 @@
+_id: bf0cyberware002
+_key: "!items!bf0cyberware002"
+name: Combat Jaw
+type: cyberware
+img: modules/cpred-best-friend/assets/icons/items/combat-jaw.webp
+system:
+  description:
+    value: "<p>External Body Cyberware. Requires 2 Option Slots. User's jaw is replaced with a sizable hydraulic jaw capable of delivering devastating bite force with two rows of reinforced teeth. The Combat Jaw functions as a Very Heavy Melee Weapon.</p>"
+    chat: ""
+    unpiped: ""
+  favorite: false
+  source: "Your New Best Friend"
+  type: externalBody
+  isWeapon: true
+  isFoundational: true
+  humanityLoss:
+    static: 0
+    roll: "4d6"
+  price:
+    market: 500
+    category: expensive
+  install: hospital
+  concealable:
+    concealable: false
+    isConcealed: false
+  slots: 2
+  installedItems:
+    allowed: false
+    slots: 0
+    list: []
+  isInstalled: false
+  isElectronic: false
+  weaponType: vHeavyMelee
+  weaponName: Combat Jaw
+  damage: "4d6"
+  rof: 1
+  weaponSkill: meleeWeapon
+  attackmod: 0
+  magazine:
+    value: 0
+    max: 0
+  fireModes:
+    singleShot: false
+    autofire: false
+    suppressive: false
+  ammoVariety: []
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

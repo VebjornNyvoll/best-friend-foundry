@@ -1,0 +1,194 @@
+_id: bf0actor0000003
+_key: "!actors!bf0actor0000003"
+name: "Neon Newt\u2122"
+type: mook
+img: modules/cpred-best-friend/assets/icons/actors/neon-newt.webp
+prototypeToken:
+  name: "Neon Newt\u2122"
+  displayName: 20
+  actorLink: false
+  appendNumber: true
+  texture:
+    src: modules/cpred-best-friend/assets/icons/tokens/neon-newt.webp
+    scaleX: 0.7
+    scaleY: 0.7
+  sight:
+    enabled: true
+    range: 30
+  bar1:
+    attribute: derivedStats.hp
+system:
+  stats:
+    int:
+      value: 1
+    ref:
+      value: 4
+    dex:
+      value: 5
+    tech:
+      value: 2
+    cool:
+      value: 3
+    will:
+      value: 2
+    luck:
+      value: 0
+    move:
+      value: 5
+    body:
+      value: 2
+    emp:
+      value: 2
+  derivedStats:
+    hp:
+      value: 20
+      max: 20
+    seriouslyWounded: 10
+    deathSave:
+      value: 3
+      basePenalty: 0
+      penalty: 0
+  information:
+    description: "<p><strong>Neon Newt\u2122</strong> &mdash; Cost: 2,000eb (Very Expensive) | Required Lifestyle: Good Prepak | Cyberware Slots: 1 | Level: Hardened Mook</p><p>A genetically modified, pocket-sized bio-flamethrower. When squeezed or otherwise agitated, the newt emits a fiery breath. Its acid-secreting skin comes in an impressive variety of lab-engineered neon pinks, blues, and greens that would never be found in nature.</p><p><strong>Acid Secretion:</strong> Neon Newts can secrete intense acid through their skin. With a successful attack the acid does not damage but lowers the SP of all worn armor by 1.</p><p><strong>Flamebreath:</strong> A Neon Newt can blow an impressive blast of fire. This acts like a Flamethrower (see CP:R page 348) and cannot be used if the Flamebreath was activated during the Newt's last Turn.</p>"
+    level: hardenedMook
+  roleInfo:
+    roles: []
+    abilities: "Acid Secretion: On hit, lowers SP of all worn armor by 1. Flamebreath: Acts like a Flamethrower, cannot be used two turns in a row."
+items:
+  # --- SKILLS ---
+  - _id: bf0skill00003a
+    _key: "!items!bf0skill00003a"
+    name: Athletics
+    type: skill
+    system:
+      level: 0
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00003b
+    _key: "!items!bf0skill00003b"
+    name: Brawling
+    type: skill
+    system:
+      level: 0
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00003c
+    _key: "!items!bf0skill00003c"
+    name: Contortionist
+    type: skill
+    system:
+      level: 7
+      stat: dex
+      category: bodySkills
+      basic: false
+      core: false
+  - _id: bf0skill00003d
+    _key: "!items!bf0skill00003d"
+    name: Evasion
+    type: skill
+    system:
+      level: 7
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00003e
+    _key: "!items!bf0skill00003e"
+    name: Human Perception
+    type: skill
+    system:
+      level: 2
+      stat: emp
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00003f
+    _key: "!items!bf0skill00003f"
+    name: Heavy Weapons
+    type: skill
+    system:
+      level: 4
+      stat: dex
+      category: fightingSkills
+      basic: false
+      core: false
+  - _id: bf0skill00003g
+    _key: "!items!bf0skill00003g"
+    name: Melee Weapon
+    type: skill
+    system:
+      level: 2
+      stat: dex
+      category: fightingSkills
+      basic: true
+      core: false
+  - _id: bf0skill00003h
+    _key: "!items!bf0skill00003h"
+    name: Perception
+    type: skill
+    system:
+      level: 11
+      stat: int
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00003i
+    _key: "!items!bf0skill00003i"
+    name: Stealth
+    type: skill
+    system:
+      level: 5
+      stat: dex
+      category: awarenessSkills
+      basic: true
+      core: false
+  - _id: bf0skill00003j
+    _key: "!items!bf0skill00003j"
+    name: Wilderness Survival
+    type: skill
+    system:
+      level: 9
+      stat: int
+      category: awarenessSkills
+      basic: false
+      core: false
+  # --- WEAPONS ---
+  - _id: bf0weap00003a
+    _key: "!items!bf0weap00003a"
+    name: Flamebreath
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: heavyPistol
+      damage: "1d6"
+      rof: 2
+      weaponSkill: heavyWeapons
+      attackmod: 0
+      combatNumber: 8
+      isRanged: true
+      description:
+        value: "<p>Acts like a Flamethrower. Cannot be used if activated during the Newt's last Turn. Target must extinguish fire or continue to burn.</p>"
+  - _id: bf0weap00003b
+    _key: "!items!bf0weap00003b"
+    name: Acid Secretion
+    type: weapon
+    system:
+      source: "Your New Best Friend"
+      weaponType: unarmed
+      damage: "0"
+      rof: 2
+      weaponSkill: brawling
+      attackmod: 0
+      combatNumber: 5
+      isRanged: false
+      description:
+        value: "<p>Does not deal damage but lowers the SP of all worn armor on the target by 1.</p>"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

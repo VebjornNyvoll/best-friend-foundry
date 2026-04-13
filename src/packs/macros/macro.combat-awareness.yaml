@@ -1,0 +1,17 @@
+_id: bf0macro000008
+_key: "!macros!bf0macro000008"
+name: "Combat Awareness (Ocelot/Wolf)"
+type: script
+scope: global
+img: icons/skills/social/intimidation-impressing.webp
+command: |-
+  const mod = game.modules.get("cpred-best-friend");
+  if (!mod?.api?.combatAwareness) {
+    ui.notifications.error("Your New Best Friend module is not active.");
+    return;
+  }
+  await mod.api.combatAwareness();
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33

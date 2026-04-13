@@ -1,0 +1,37 @@
+_id: bf0cyberware001
+_key: "!items!bf0cyberware001"
+name: Chipware Compartment
+type: cyberware
+img: modules/cpred-best-friend/assets/icons/items/chipware-compartment.webp
+system:
+  description:
+    value: "<p>Cybereye Option. Requires 3 Option Slots. A compartment that can conceal up to four pieces of chipware without a roll. Chipware can be easily removed as an Action by spinning the eye in its socket.</p>"
+    chat: ""
+    unpiped: ""
+  favorite: false
+  source: "Your New Best Friend"
+  type: cybereye
+  isWeapon: false
+  isFoundational: false
+  humanityLoss:
+    static: 0
+    roll: "1d6"
+  price:
+    market: 100
+    category: premium
+  install: clinic
+  concealable:
+    concealable: true
+    isConcealed: false
+  slots: 3
+  installedItems:
+    allowed: true
+    slots: 4
+    list: []
+  isInstalled: false
+  isElectronic: true
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
