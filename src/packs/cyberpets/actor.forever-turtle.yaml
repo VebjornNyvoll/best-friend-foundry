@@ -1,5 +1,5 @@
-_id: bf0actor0000002
-_key: "!actors!bf0actor0000002"
+_id: bf0actor00000020
+_key: "!actors!bf0actor00000020"
 name: "Forever Turtle\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/forever-turtle.webp
@@ -56,8 +56,8 @@ system:
     abilities: "Protection: Draw into shell to extend Hardened Shell SP to head. Cannot be targeted by Aimed Shots while withdrawn."
 items:
   # --- SKILLS ---
-  - _id: bf0skill00002a
-    _key: "!items!bf0skill00002a"
+  - _id: bf0skill00002a00
+    _key: "!items!bf0skill00002a00"
     name: Athletics
     type: skill
     system:
@@ -66,8 +66,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00002b
-    _key: "!items!bf0skill00002b"
+  - _id: bf0skill00002b00
+    _key: "!items!bf0skill00002b00"
     name: Brawling
     type: skill
     system:
@@ -76,8 +76,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00002c
-    _key: "!items!bf0skill00002c"
+  - _id: bf0skill00002c00
+    _key: "!items!bf0skill00002c00"
     name: Evasion
     type: skill
     system:
@@ -86,8 +86,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00002d
-    _key: "!items!bf0skill00002d"
+  - _id: bf0skill00002d00
+    _key: "!items!bf0skill00002d00"
     name: Human Perception
     type: skill
     system:
@@ -96,8 +96,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00002e
-    _key: "!items!bf0skill00002e"
+  - _id: bf0skill00002e00
+    _key: "!items!bf0skill00002e00"
     name: Melee Weapon
     type: skill
     system:
@@ -106,8 +106,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00002f
-    _key: "!items!bf0skill00002f"
+  - _id: bf0skill00002f00
+    _key: "!items!bf0skill00002f00"
     name: Perception
     type: skill
     system:
@@ -116,8 +116,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00002g
-    _key: "!items!bf0skill00002g"
+  - _id: bf0skill00002g00
+    _key: "!items!bf0skill00002g00"
     name: Stealth
     type: skill
     system:
@@ -126,8 +126,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00002h
-    _key: "!items!bf0skill00002h"
+  - _id: bf0skill00002h00
+    _key: "!items!bf0skill00002h00"
     name: Wilderness Survival
     type: skill
     system:
@@ -137,8 +137,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00002a
-    _key: "!items!bf0weap00002a"
+  - _id: bf0weap00002a000
+    _key: "!items!bf0weap00002a000"
     name: Combat Jaw
     type: weapon
     system:
@@ -150,8 +150,8 @@ items:
       attackmod: 0
       combatNumber: 8
       isRanged: false
-  - _id: bf0weap00002b
-    _key: "!items!bf0weap00002b"
+  - _id: bf0weap00002b000
+    _key: "!items!bf0weap00002b000"
     name: Brawling Attack
     type: weapon
     system:
@@ -164,45 +164,45 @@ items:
       combatNumber: 5
       isRanged: false
   # --- CYBERWARE ---
-  - _id: bf0cyber0002a
-    _key: "!items!bf0cyber0002a"
+  - _id: bf0cyber0002a000
+    _key: "!items!bf0cyber0002a000"
     name: Combat Jaw
     type: cyberware
     system:
       description:
         value: "<p>Hydraulic jaw. Functions as a Very Heavy Melee Weapon (4d6 damage).</p>"
       source: "Your New Best Friend"
-      type: externalBody
+      type: cyberwareExternal
       isWeapon: true
       isFoundational: true
       isInstalled: true
-  - _id: bf0cyber0002b
-    _key: "!items!bf0cyber0002b"
+  - _id: bf0cyber0002b000
+    _key: "!items!bf0cyber0002b000"
     name: Hardened Shell (Subdermal Armor)
     type: cyberware
     system:
       description:
         value: "<p>Hardened Shell providing SP 11 body protection. When Protection ability is active, extends to head.</p>"
       source: "Your New Best Friend"
-      type: internalBody
+      type: cyberwareInternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
-  - _id: bf0cyber0002c
-    _key: "!items!bf0cyber0002c"
+  - _id: bf0cyber0002c000
+    _key: "!items!bf0cyber0002c000"
     name: Trauma Response Nanomatrix
     type: cyberware
     system:
       description:
         value: "<p>Once per day, as an Action, repair Skinweave or Subdermal Armor to full SP.</p>"
       source: "Your New Best Friend"
-      type: internalBody
+      type: cyberwareInternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
   # --- ARMOR ---
-  - _id: bf0armor0002a
-    _key: "!items!bf0armor0002a"
+  - _id: bf0armor0002a000
+    _key: "!items!bf0armor0002a000"
     name: Hardened Shell
     type: armor
     system:

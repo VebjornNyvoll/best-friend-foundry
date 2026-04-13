@@ -1,5 +1,5 @@
-_id: bf0cyberware005
-_key: "!items!bf0cyberware005"
+_id: bf0cyberware0050
+_key: "!items!bf0cyberware0050"
 name: Hardened Cybereye Casing
 type: cyberware
 img: modules/cpred-best-friend/assets/icons/items/hardened-casing.webp
@@ -10,7 +10,7 @@ system:
     unpiped: ""
   favorite: false
   source: "Your New Best Friend"
-  type: cybereye
+  type: cyberEye
   isWeapon: false
   isFoundational: false
   humanityLoss:

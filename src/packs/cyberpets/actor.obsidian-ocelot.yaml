@@ -1,5 +1,5 @@
-_id: bf0actor0000004
-_key: "!actors!bf0actor0000004"
+_id: bf0actor00000040
+_key: "!actors!bf0actor00000040"
 name: "Obsidian Ocelot\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/obsidian-ocelot.webp
@@ -56,8 +56,8 @@ system:
     abilities: "Combat Awareness Rank 5: Functions as the Combat Awareness Role Ability at Rank 5."
 items:
   # --- SKILLS ---
-  - _id: bf0skill00004a
-    _key: "!items!bf0skill00004a"
+  - _id: bf0skill00004a00
+    _key: "!items!bf0skill00004a00"
     name: Athletics
     type: skill
     system:
@@ -66,8 +66,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00004b
-    _key: "!items!bf0skill00004b"
+  - _id: bf0skill00004b00
+    _key: "!items!bf0skill00004b00"
     name: Brawling
     type: skill
     system:
@@ -76,8 +76,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00004c
-    _key: "!items!bf0skill00004c"
+  - _id: bf0skill00004c00
+    _key: "!items!bf0skill00004c00"
     name: Endurance
     type: skill
     system:
@@ -86,8 +86,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00004d
-    _key: "!items!bf0skill00004d"
+  - _id: bf0skill00004d00
+    _key: "!items!bf0skill00004d00"
     name: Evasion
     type: skill
     system:
@@ -96,8 +96,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00004e
-    _key: "!items!bf0skill00004e"
+  - _id: bf0skill00004e00
+    _key: "!items!bf0skill00004e00"
     name: Human Perception
     type: skill
     system:
@@ -106,8 +106,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00004f
-    _key: "!items!bf0skill00004f"
+  - _id: bf0skill00004f00
+    _key: "!items!bf0skill00004f00"
     name: Perception
     type: skill
     system:
@@ -116,8 +116,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00004g
-    _key: "!items!bf0skill00004g"
+  - _id: bf0skill00004g00
+    _key: "!items!bf0skill00004g00"
     name: Stealth
     type: skill
     system:
@@ -126,8 +126,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00004h
-    _key: "!items!bf0skill00004h"
+  - _id: bf0skill00004h00
+    _key: "!items!bf0skill00004h00"
     name: Tactics
     type: skill
     system:
@@ -136,8 +136,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00004i
-    _key: "!items!bf0skill00004i"
+  - _id: bf0skill00004i00
+    _key: "!items!bf0skill00004i00"
     name: Tracking
     type: skill
     system:
@@ -146,8 +146,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00004j
-    _key: "!items!bf0skill00004j"
+  - _id: bf0skill00004j00
+    _key: "!items!bf0skill00004j00"
     name: Wilderness Survival
     type: skill
     system:
@@ -157,8 +157,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00004a
-    _key: "!items!bf0weap00004a"
+  - _id: bf0weap00004a000
+    _key: "!items!bf0weap00004a000"
     name: Combat Jaw
     type: weapon
     system:
@@ -170,8 +170,8 @@ items:
       attackmod: 0
       combatNumber: 15
       isRanged: false
-  - _id: bf0weap00004b
-    _key: "!items!bf0weap00004b"
+  - _id: bf0weap00004b000
+    _key: "!items!bf0weap00004b000"
     name: Cat Claws
     type: weapon
     system:
@@ -184,43 +184,43 @@ items:
       combatNumber: 15
       isRanged: false
   # --- CYBERWARE ---
-  - _id: bf0cyber0004a
-    _key: "!items!bf0cyber0004a"
+  - _id: bf0cyber0004a000
+    _key: "!items!bf0cyber0004a000"
     name: Combat Jaw
     type: cyberware
     system:
       source: "Your New Best Friend"
-      type: externalBody
+      type: cyberwareExternal
       isWeapon: true
       isFoundational: true
       isInstalled: true
-  - _id: bf0cyber0004b
-    _key: "!items!bf0cyber0004b"
+  - _id: bf0cyber0004b000
+    _key: "!items!bf0cyber0004b000"
     name: "FBC Chameleon Coating (TUp Animal Compatibility)"
     type: cyberware
     system:
       description:
         value: "<p>Cloak that hides from all visual senses (DV17 Perception to spot). Must remain still for 1 minute to activate.</p>"
       source: "Your New Best Friend"
-      type: externalBody
+      type: cyberwareExternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
-  - _id: bf0cyber0004c
-    _key: "!items!bf0cyber0004c"
+  - _id: bf0cyber0004c000
+    _key: "!items!bf0cyber0004c000"
     name: "Subdermal Armor (TUp +1 SP)"
     type: cyberware
     system:
       description:
         value: "<p>Subdermal Armor with TUp +1 SP, providing SP 12.</p>"
       source: "Your New Best Friend"
-      type: internalBody
+      type: cyberwareInternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
   # --- ARMOR ---
-  - _id: bf0armor0004a
-    _key: "!items!bf0armor0004a"
+  - _id: bf0armor0004a000
+    _key: "!items!bf0armor0004a000"
     name: "Subdermal Armor (TUp +1 SP)"
     type: armor
     system:

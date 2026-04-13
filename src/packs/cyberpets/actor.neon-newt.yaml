@@ -1,5 +1,5 @@
-_id: bf0actor0000003
-_key: "!actors!bf0actor0000003"
+_id: bf0actor00000030
+_key: "!actors!bf0actor00000030"
 name: "Neon Newt\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/neon-newt.webp
@@ -56,8 +56,8 @@ system:
     abilities: "Acid Secretion: On hit, lowers SP of all worn armor by 1. Flamebreath: Acts like a Flamethrower, cannot be used two turns in a row."
 items:
   # --- SKILLS ---
-  - _id: bf0skill00003a
-    _key: "!items!bf0skill00003a"
+  - _id: bf0skill00003a00
+    _key: "!items!bf0skill00003a00"
     name: Athletics
     type: skill
     system:
@@ -66,8 +66,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00003b
-    _key: "!items!bf0skill00003b"
+  - _id: bf0skill00003b00
+    _key: "!items!bf0skill00003b00"
     name: Brawling
     type: skill
     system:
@@ -76,8 +76,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00003c
-    _key: "!items!bf0skill00003c"
+  - _id: bf0skill00003c00
+    _key: "!items!bf0skill00003c00"
     name: Contortionist
     type: skill
     system:
@@ -86,8 +86,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00003d
-    _key: "!items!bf0skill00003d"
+  - _id: bf0skill00003d00
+    _key: "!items!bf0skill00003d00"
     name: Evasion
     type: skill
     system:
@@ -96,8 +96,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00003e
-    _key: "!items!bf0skill00003e"
+  - _id: bf0skill00003e00
+    _key: "!items!bf0skill00003e00"
     name: Human Perception
     type: skill
     system:
@@ -106,8 +106,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00003f
-    _key: "!items!bf0skill00003f"
+  - _id: bf0skill00003f00
+    _key: "!items!bf0skill00003f00"
     name: Heavy Weapons
     type: skill
     system:
@@ -116,8 +116,8 @@ items:
       category: fightingSkills
       basic: false
       core: false
-  - _id: bf0skill00003g
-    _key: "!items!bf0skill00003g"
+  - _id: bf0skill00003g00
+    _key: "!items!bf0skill00003g00"
     name: Melee Weapon
     type: skill
     system:
@@ -126,8 +126,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00003h
-    _key: "!items!bf0skill00003h"
+  - _id: bf0skill00003h00
+    _key: "!items!bf0skill00003h00"
     name: Perception
     type: skill
     system:
@@ -136,8 +136,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00003i
-    _key: "!items!bf0skill00003i"
+  - _id: bf0skill00003i00
+    _key: "!items!bf0skill00003i00"
     name: Stealth
     type: skill
     system:
@@ -146,8 +146,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00003j
-    _key: "!items!bf0skill00003j"
+  - _id: bf0skill00003j00
+    _key: "!items!bf0skill00003j00"
     name: Wilderness Survival
     type: skill
     system:
@@ -157,8 +157,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00003a
-    _key: "!items!bf0weap00003a"
+  - _id: bf0weap00003a000
+    _key: "!items!bf0weap00003a000"
     name: Flamebreath
     type: weapon
     system:
@@ -172,8 +172,8 @@ items:
       isRanged: true
       description:
         value: "<p>Acts like a Flamethrower. Cannot be used if activated during the Newt's last Turn. Target must extinguish fire or continue to burn.</p>"
-  - _id: bf0weap00003b
-    _key: "!items!bf0weap00003b"
+  - _id: bf0weap00003b000
+    _key: "!items!bf0weap00003b000"
     name: Acid Secretion
     type: weapon
     system:

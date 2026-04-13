@@ -1,5 +1,5 @@
-_id: bf0actor0000008
-_key: "!actors!bf0actor0000008"
+_id: bf0actor00000080
+_key: "!actors!bf0actor00000080"
 name: "Cyberwolf\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/cyberwolf.webp
@@ -56,8 +56,8 @@ system:
     abilities: "Combat Awareness Rank 3: Functions as the Combat Awareness Role Ability at Rank 3, only while within 20 m/yds of another Cyberwolf in its pack."
 items:
   # --- SKILLS ---
-  - _id: bf0skill00008a
-    _key: "!items!bf0skill00008a"
+  - _id: bf0skill00008a00
+    _key: "!items!bf0skill00008a00"
     name: Athletics
     type: skill
     system:
@@ -66,8 +66,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00008b
-    _key: "!items!bf0skill00008b"
+  - _id: bf0skill00008b00
+    _key: "!items!bf0skill00008b00"
     name: Brawling
     type: skill
     system:
@@ -76,8 +76,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00008c
-    _key: "!items!bf0skill00008c"
+  - _id: bf0skill00008c00
+    _key: "!items!bf0skill00008c00"
     name: Concentration
     type: skill
     system:
@@ -86,8 +86,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00008d
-    _key: "!items!bf0skill00008d"
+  - _id: bf0skill00008d00
+    _key: "!items!bf0skill00008d00"
     name: Endurance
     type: skill
     system:
@@ -96,8 +96,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00008e
-    _key: "!items!bf0skill00008e"
+  - _id: bf0skill00008e00
+    _key: "!items!bf0skill00008e00"
     name: Evasion
     type: skill
     system:
@@ -106,8 +106,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00008f
-    _key: "!items!bf0skill00008f"
+  - _id: bf0skill00008f00
+    _key: "!items!bf0skill00008f00"
     name: Human Perception
     type: skill
     system:
@@ -116,8 +116,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00008g
-    _key: "!items!bf0skill00008g"
+  - _id: bf0skill00008g00
+    _key: "!items!bf0skill00008g00"
     name: Melee Weapon
     type: skill
     system:
@@ -126,8 +126,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00008h
-    _key: "!items!bf0skill00008h"
+  - _id: bf0skill00008h00
+    _key: "!items!bf0skill00008h00"
     name: Perception
     type: skill
     system:
@@ -136,8 +136,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00008i
-    _key: "!items!bf0skill00008i"
+  - _id: bf0skill00008i00
+    _key: "!items!bf0skill00008i00"
     name: Stealth
     type: skill
     system:
@@ -146,8 +146,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00008j
-    _key: "!items!bf0skill00008j"
+  - _id: bf0skill00008j00
+    _key: "!items!bf0skill00008j00"
     name: Tactics
     type: skill
     system:
@@ -156,8 +156,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00008k
-    _key: "!items!bf0skill00008k"
+  - _id: bf0skill00008k00
+    _key: "!items!bf0skill00008k00"
     name: Tracking
     type: skill
     system:
@@ -166,8 +166,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00008l
-    _key: "!items!bf0skill00008l"
+  - _id: bf0skill00008l00
+    _key: "!items!bf0skill00008l00"
     name: Wilderness Survival
     type: skill
     system:
@@ -177,8 +177,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00008a
-    _key: "!items!bf0weap00008a"
+  - _id: bf0weap00008a000
+    _key: "!items!bf0weap00008a000"
     name: "Combat Jaw (TUp Grapple Damage Bonus)"
     type: weapon
     system:
@@ -192,8 +192,8 @@ items:
       isRanged: false
       description:
         value: "<p>TUp: +1d6 damage vs target the Cyberwolf is grappling.</p>"
-  - _id: bf0weap00008b
-    _key: "!items!bf0weap00008b"
+  - _id: bf0weap00008b000
+    _key: "!items!bf0weap00008b000"
     name: Claws
     type: weapon
     system:
@@ -206,20 +206,20 @@ items:
       combatNumber: 12
       isRanged: false
   # --- CYBERWARE ---
-  - _id: bf0cyber0008a
-    _key: "!items!bf0cyber0008a"
+  - _id: bf0cyber0008a000
+    _key: "!items!bf0cyber0008a000"
     name: "Combat Jaw (TUp +1d6 Grapple Damage)"
     type: cyberware
     system:
       description:
         value: "<p>Combat Jaw with TUp providing +1d6 damage against grappled targets.</p>"
       source: "Your New Best Friend"
-      type: externalBody
+      type: cyberwareExternal
       isWeapon: true
       isFoundational: true
       isInstalled: true
-  - _id: bf0cyber0008b
-    _key: "!items!bf0cyber0008b"
+  - _id: bf0cyber0008b000
+    _key: "!items!bf0cyber0008b000"
     name: "Cyberaudio Suite w/ Internal Agent"
     type: cyberware
     system:
@@ -231,22 +231,22 @@ items:
       isFoundational: true
       isInstalled: true
       isElectronic: true
-  - _id: bf0cyber0008c
-    _key: "!items!bf0cyber0008c"
+  - _id: bf0cyber0008c000
+    _key: "!items!bf0cyber0008c000"
     name: "Cybereye w/ Chyron & Targeting Scope"
     type: cyberware
     system:
       description:
         value: "<p>Cybereye with Chyron display and Targeting Scope for enhanced pack tactics.</p>"
       source: "Your New Best Friend"
-      type: cybereye
+      type: cyberEye
       isWeapon: false
       isFoundational: true
       isInstalled: true
       isElectronic: true
   # --- ARMOR ---
-  - _id: bf0armor0008a
-    _key: "!items!bf0armor0008a"
+  - _id: bf0armor0008a000
+    _key: "!items!bf0armor0008a000"
     name: Light Armorjack
     type: armor
     system:

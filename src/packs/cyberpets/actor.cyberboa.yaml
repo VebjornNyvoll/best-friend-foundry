@@ -1,5 +1,5 @@
-_id: bf0actor0000006
-_key: "!actors!bf0actor0000006"
+_id: bf0actor00000060
+_key: "!actors!bf0actor00000060"
 name: "Cyberboa\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/cyberboa.webp
@@ -56,8 +56,8 @@ system:
     abilities: "Airhypo Vampyres: On Vampyres hit, injects a dose of loaded substance. Holds 5 doses of a single Biotoxin, Poison, or Street Drug."
 items:
   # --- SKILLS ---
-  - _id: bf0skill00006a
-    _key: "!items!bf0skill00006a"
+  - _id: bf0skill00006a00
+    _key: "!items!bf0skill00006a00"
     name: Athletics
     type: skill
     system:
@@ -66,8 +66,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00006b
-    _key: "!items!bf0skill00006b"
+  - _id: bf0skill00006b00
+    _key: "!items!bf0skill00006b00"
     name: Brawling
     type: skill
     system:
@@ -76,8 +76,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00006c
-    _key: "!items!bf0skill00006c"
+  - _id: bf0skill00006c00
+    _key: "!items!bf0skill00006c00"
     name: Contortionist
     type: skill
     system:
@@ -86,8 +86,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00006d
-    _key: "!items!bf0skill00006d"
+  - _id: bf0skill00006d00
+    _key: "!items!bf0skill00006d00"
     name: Endurance
     type: skill
     system:
@@ -96,8 +96,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00006e
-    _key: "!items!bf0skill00006e"
+  - _id: bf0skill00006e00
+    _key: "!items!bf0skill00006e00"
     name: Evasion
     type: skill
     system:
@@ -106,8 +106,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00006f
-    _key: "!items!bf0skill00006f"
+  - _id: bf0skill00006f00
+    _key: "!items!bf0skill00006f00"
     name: Human Perception
     type: skill
     system:
@@ -116,8 +116,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00006g
-    _key: "!items!bf0skill00006g"
+  - _id: bf0skill00006g00
+    _key: "!items!bf0skill00006g00"
     name: Melee Weapon
     type: skill
     system:
@@ -126,8 +126,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00006h
-    _key: "!items!bf0skill00006h"
+  - _id: bf0skill00006h00
+    _key: "!items!bf0skill00006h00"
     name: Perception
     type: skill
     system:
@@ -136,8 +136,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00006i
-    _key: "!items!bf0skill00006i"
+  - _id: bf0skill00006i00
+    _key: "!items!bf0skill00006i00"
     name: Stealth
     type: skill
     system:
@@ -146,8 +146,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00006j
-    _key: "!items!bf0skill00006j"
+  - _id: bf0skill00006j00
+    _key: "!items!bf0skill00006j00"
     name: Tracking
     type: skill
     system:
@@ -156,8 +156,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00006k
-    _key: "!items!bf0skill00006k"
+  - _id: bf0skill00006k00
+    _key: "!items!bf0skill00006k00"
     name: Wilderness Survival
     type: skill
     system:
@@ -167,8 +167,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00006a
-    _key: "!items!bf0weap00006a"
+  - _id: bf0weap00006a000
+    _key: "!items!bf0weap00006a000"
     name: "Vampyres (TUp Airhypo)"
     type: weapon
     system:
@@ -182,8 +182,8 @@ items:
       isRanged: false
       description:
         value: "<p>On hit, Airhypo injects a dose of loaded substance (5 dose capacity).</p>"
-  - _id: bf0weap00006b
-    _key: "!items!bf0weap00006b"
+  - _id: bf0weap00006b000
+    _key: "!items!bf0weap00006b000"
     name: Brawling Attack
     type: weapon
     system:
@@ -196,45 +196,45 @@ items:
       combatNumber: 16
       isRanged: false
   # --- CYBERWARE ---
-  - _id: bf0cyber0006a
-    _key: "!items!bf0cyber0006a"
+  - _id: bf0cyber0006a000
+    _key: "!items!bf0cyber0006a000"
     name: "Flashbulb (TUp Third Eye Mounted)"
     type: cyberware
     system:
       description:
         value: "<p>Flashbulb mounted via Third Eye TUp. Forces DV15 Resist Torture/Drugs or Damaged Eye Critical for 1 minute.</p>"
       source: "Your New Best Friend"
-      type: externalBody
+      type: cyberwareExternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
-  - _id: bf0cyber0006b
-    _key: "!items!bf0cyber0006b"
+  - _id: bf0cyber0006b000
+    _key: "!items!bf0cyber0006b000"
     name: "Neural Link w/ Chipware Socket & Pain Editor"
     type: cyberware
     system:
       description:
         value: "<p>Neural Link with Chipware Socket and Pain Editor. Ignores wound penalties.</p>"
       source: "Your New Best Friend"
-      type: neuralLink
+      type: neuralWare
       isWeapon: false
       isFoundational: true
       isInstalled: true
       isElectronic: true
-  - _id: bf0cyber0006c
-    _key: "!items!bf0cyber0006c"
+  - _id: bf0cyber0006c000
+    _key: "!items!bf0cyber0006c000"
     name: "Subdermal Armor (TUp +1 SP)"
     type: cyberware
     system:
       description:
         value: "<p>Subdermal Armor with TUp +1 SP, providing SP 12.</p>"
       source: "Your New Best Friend"
-      type: internalBody
+      type: cyberwareInternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
-  - _id: bf0cyber0006d
-    _key: "!items!bf0cyber0006d"
+  - _id: bf0cyber0006d000
+    _key: "!items!bf0cyber0006d000"
     name: "Vampyres (TUp Airhypo)"
     type: cyberware
     system:
@@ -246,8 +246,8 @@ items:
       isFoundational: false
       isInstalled: true
   # --- ARMOR ---
-  - _id: bf0armor0006a
-    _key: "!items!bf0armor0006a"
+  - _id: bf0armor0006a000
+    _key: "!items!bf0armor0006a000"
     name: "Subdermal Armor (TUp +1 SP)"
     type: armor
     system:

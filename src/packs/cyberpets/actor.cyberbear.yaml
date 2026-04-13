@@ -1,5 +1,5 @@
-_id: bf0actor0000005
-_key: "!actors!bf0actor0000005"
+_id: bf0actor00000050
+_key: "!actors!bf0actor00000050"
 name: "Cyberbear\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/cyberbear.webp
@@ -56,8 +56,8 @@ system:
     abilities: "Cyberbear Martial Art: Recovery (DV13 free Get Up) and Three-Arm Strike (DV15 after two claw hits, four options on success, 5 self-damage on failure)."
 items:
   # --- SKILLS ---
-  - _id: bf0skill00005a
-    _key: "!items!bf0skill00005a"
+  - _id: bf0skill00005a00
+    _key: "!items!bf0skill00005a00"
     name: Athletics
     type: skill
     system:
@@ -66,8 +66,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00005b
-    _key: "!items!bf0skill00005b"
+  - _id: bf0skill00005b00
+    _key: "!items!bf0skill00005b00"
     name: Brawling
     type: skill
     system:
@@ -76,8 +76,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00005c
-    _key: "!items!bf0skill00005c"
+  - _id: bf0skill00005c00
+    _key: "!items!bf0skill00005c00"
     name: Concentration
     type: skill
     system:
@@ -86,8 +86,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00005d
-    _key: "!items!bf0skill00005d"
+  - _id: bf0skill00005d00
+    _key: "!items!bf0skill00005d00"
     name: Evasion
     type: skill
     system:
@@ -96,8 +96,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00005e
-    _key: "!items!bf0skill00005e"
+  - _id: bf0skill00005e00
+    _key: "!items!bf0skill00005e00"
     name: Human Perception
     type: skill
     system:
@@ -106,8 +106,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00005f
-    _key: "!items!bf0skill00005f"
+  - _id: bf0skill00005f00
+    _key: "!items!bf0skill00005f00"
     name: "Martial Arts (Cyberbear)"
     type: skill
     system:
@@ -116,8 +116,8 @@ items:
       category: fightingSkills
       basic: false
       core: false
-  - _id: bf0skill00005g
-    _key: "!items!bf0skill00005g"
+  - _id: bf0skill00005g00
+    _key: "!items!bf0skill00005g00"
     name: Melee Weapon
     type: skill
     system:
@@ -126,8 +126,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00005h
-    _key: "!items!bf0skill00005h"
+  - _id: bf0skill00005h00
+    _key: "!items!bf0skill00005h00"
     name: Perception
     type: skill
     system:
@@ -136,8 +136,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00005i
-    _key: "!items!bf0skill00005i"
+  - _id: bf0skill00005i00
+    _key: "!items!bf0skill00005i00"
     name: Persuasion
     type: skill
     system:
@@ -146,8 +146,8 @@ items:
       category: socialSkills
       basic: true
       core: false
-  - _id: bf0skill00005j
-    _key: "!items!bf0skill00005j"
+  - _id: bf0skill00005j00
+    _key: "!items!bf0skill00005j00"
     name: Resist Torture/Drugs
     type: skill
     system:
@@ -156,8 +156,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00005k
-    _key: "!items!bf0skill00005k"
+  - _id: bf0skill00005k00
+    _key: "!items!bf0skill00005k00"
     name: Stealth
     type: skill
     system:
@@ -166,8 +166,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00005l
-    _key: "!items!bf0skill00005l"
+  - _id: bf0skill00005l00
+    _key: "!items!bf0skill00005l00"
     name: Wilderness Survival
     type: skill
     system:
@@ -177,8 +177,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00005a
-    _key: "!items!bf0weap00005a"
+  - _id: bf0weap00005a000
+    _key: "!items!bf0weap00005a000"
     name: Bear Claw
     type: weapon
     system:
@@ -190,8 +190,8 @@ items:
       attackmod: 0
       combatNumber: 16
       isRanged: false
-  - _id: bf0weap00005b
-    _key: "!items!bf0weap00005b"
+  - _id: bf0weap00005b000
+    _key: "!items!bf0weap00005b000"
     name: Combat Jaw
     type: weapon
     system:
@@ -204,56 +204,56 @@ items:
       combatNumber: 16
       isRanged: false
   # --- CYBERWARE ---
-  - _id: bf0cyber0005a
-    _key: "!items!bf0cyber0005a"
+  - _id: bf0cyber0005a000
+    _key: "!items!bf0cyber0005a000"
     name: Combat Jaw
     type: cyberware
     system:
       source: "Your New Best Friend"
-      type: externalBody
+      type: cyberwareExternal
       isWeapon: true
       isFoundational: true
       isInstalled: true
-  - _id: bf0cyber0005b
-    _key: "!items!bf0cyber0005b"
+  - _id: bf0cyber0005b000
+    _key: "!items!bf0cyber0005b000"
     name: Grafted Muscle & Bone Lace
     type: cyberware
     system:
       description:
         value: "<p>Grafted Muscle and Bone Lace. Increases BODY.</p>"
       source: "Your New Best Friend"
-      type: internalBody
+      type: cyberwareInternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
-  - _id: bf0cyber0005c
-    _key: "!items!bf0cyber0005c"
+  - _id: bf0cyber0005c000
+    _key: "!items!bf0cyber0005c000"
     name: "Neural Link w/ Chipware Socket & Pain Editor"
     type: cyberware
     system:
       description:
         value: "<p>Neural Link with Chipware Socket and Pain Editor. Ignores wound penalties.</p>"
       source: "Your New Best Friend"
-      type: neuralLink
+      type: neuralWare
       isWeapon: false
       isFoundational: true
       isInstalled: true
       isElectronic: true
-  - _id: bf0cyber0005d
-    _key: "!items!bf0cyber0005d"
+  - _id: bf0cyber0005d000
+    _key: "!items!bf0cyber0005d000"
     name: "Subdermal Armor (TUp +2 SP, Requires BODY 10)"
     type: cyberware
     system:
       description:
         value: "<p>Subdermal Armor with TUp +2 SP (requires BODY 10), providing SP 13.</p>"
       source: "Your New Best Friend"
-      type: internalBody
+      type: cyberwareInternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
   # --- ARMOR ---
-  - _id: bf0armor0005a
-    _key: "!items!bf0armor0005a"
+  - _id: bf0armor0005a000
+    _key: "!items!bf0armor0005a000"
     name: "Subdermal Armor (TUp +2 SP)"
     type: armor
     system:

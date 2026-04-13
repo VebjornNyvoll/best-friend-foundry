@@ -1,10 +1,10 @@
-_id: bf0journal00003
-_key: "!journal!bf0journal00003"
+_id: bf0journal000030
+_key: "!journal!bf0journal000030"
 name: "Cyberbear Martial Art"
 img: modules/cpred-best-friend/assets/icons/actors/cyberbear.webp
 pages:
-  - _id: bf0jpage000008
-    _key: "!journal.pages!bf0journal00003.bf0jpage000008"
+  - _id: bf0jpage00000800
+    _key: "!journal.pages!bf0journal000030.bf0jpage00000800"
     name: "Cyberbear Martial Art"
     type: text
     text:

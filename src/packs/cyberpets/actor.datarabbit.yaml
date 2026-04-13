@@ -1,5 +1,5 @@
-_id: bf0actor0000001
-_key: "!actors!bf0actor0000001"
+_id: bf0actor00000010
+_key: "!actors!bf0actor00000010"
 name: "Datarabbit\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/datarabbit.webp
@@ -57,8 +57,8 @@ system:
     abilities: ""
 items:
   # --- SKILLS ---
-  - _id: bf0skill00001a
-    _key: "!items!bf0skill00001a"
+  - _id: bf0skill00001a00
+    _key: "!items!bf0skill00001a00"
     name: Athletics
     type: skill
     system:
@@ -67,8 +67,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00001b
-    _key: "!items!bf0skill00001b"
+  - _id: bf0skill00001b00
+    _key: "!items!bf0skill00001b00"
     name: Endurance
     type: skill
     system:
@@ -77,8 +77,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00001c
-    _key: "!items!bf0skill00001c"
+  - _id: bf0skill00001c00
+    _key: "!items!bf0skill00001c00"
     name: Evasion
     type: skill
     system:
@@ -87,8 +87,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00001d
-    _key: "!items!bf0skill00001d"
+  - _id: bf0skill00001d00
+    _key: "!items!bf0skill00001d00"
     name: Human Perception
     type: skill
     system:
@@ -97,8 +97,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00001e
-    _key: "!items!bf0skill00001e"
+  - _id: bf0skill00001e00
+    _key: "!items!bf0skill00001e00"
     name: Perception
     type: skill
     system:
@@ -107,8 +107,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00001f
-    _key: "!items!bf0skill00001f"
+  - _id: bf0skill00001f00
+    _key: "!items!bf0skill00001f00"
     name: Stealth
     type: skill
     system:
@@ -117,8 +117,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00001g
-    _key: "!items!bf0skill00001g"
+  - _id: bf0skill00001g00
+    _key: "!items!bf0skill00001g00"
     name: Wilderness Survival
     type: skill
     system:
@@ -128,8 +128,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00001a
-    _key: "!items!bf0weap00001a"
+  - _id: bf0weap00001a000
+    _key: "!items!bf0weap00001a000"
     name: Teeth
     type: weapon
     system:
@@ -148,8 +148,8 @@ items:
         singleShot: false
         autofire: false
         suppressive: false
-  - _id: bf0weap00001b
-    _key: "!items!bf0weap00001b"
+  - _id: bf0weap00001b000
+    _key: "!items!bf0weap00001b000"
     name: Brawling Attack
     type: weapon
     system:
@@ -169,8 +169,8 @@ items:
         autofire: false
         suppressive: false
   # --- CYBERWARE ---
-  - _id: bf0cyber0001a
-    _key: "!items!bf0cyber0001a"
+  - _id: bf0cyber0001a000
+    _key: "!items!bf0cyber0001a000"
     name: "Homing Tracer Cyberfinger (TUp Independent Mounting)"
     type: cyberware
     system:
@@ -181,34 +181,34 @@ items:
       isWeapon: false
       isFoundational: false
       isInstalled: true
-  - _id: bf0cyber0001b
-    _key: "!items!bf0cyber0001b"
+  - _id: bf0cyber0001b000
+    _key: "!items!bf0cyber0001b000"
     name: "Cybereye w/ Chipware Compartment & Hardened Casing"
     type: cyberware
     system:
       description:
         value: "<p>TUp (+1 Option Slot) Cybereye with Chipware Compartment (conceals up to 4 chipware) and Hardened Cybereye Casing (immune to EMP/electric/microwaver).</p>"
       source: "Your New Best Friend"
-      type: cybereye
+      type: cyberEye
       isWeapon: false
       isFoundational: true
       isInstalled: true
       isElectronic: false
-  - _id: bf0cyber0001c
-    _key: "!items!bf0cyber0001c"
+  - _id: bf0cyber0001c000
+    _key: "!items!bf0cyber0001c000"
     name: Subdermal Armor
     type: cyberware
     system:
       description:
         value: "<p>Subdermal Armor providing SP 11 to body and head.</p>"
       source: "Your New Best Friend"
-      type: internalBody
+      type: cyberwareInternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
   # --- ARMOR ---
-  - _id: bf0armor0001a
-    _key: "!items!bf0armor0001a"
+  - _id: bf0armor0001a000
+    _key: "!items!bf0armor0001a000"
     name: Subdermal Armor
     type: armor
     system:

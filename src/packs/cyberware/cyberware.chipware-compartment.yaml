@@ -1,5 +1,5 @@
-_id: bf0cyberware001
-_key: "!items!bf0cyberware001"
+_id: bf0cyberware0010
+_key: "!items!bf0cyberware0010"
 name: Chipware Compartment
 type: cyberware
 img: modules/cpred-best-friend/assets/icons/items/chipware-compartment.webp
@@ -10,7 +10,7 @@ system:
     unpiped: ""
   favorite: false
   source: "Your New Best Friend"
-  type: cybereye
+  type: cyberEye
   isWeapon: false
   isFoundational: false
   humanityLoss:

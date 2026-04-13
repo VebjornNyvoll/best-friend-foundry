@@ -1,5 +1,5 @@
-_id: bf0actor0000007
-_key: "!actors!bf0actor0000007"
+_id: bf0actor00000070
+_key: "!actors!bf0actor00000070"
 name: "Cyberrat\u2122"
 type: mook
 img: modules/cpred-best-friend/assets/icons/actors/cyberrat.webp
@@ -56,8 +56,8 @@ system:
     abilities: "Venom Fangs/Claws: On hit, target must beat DV13 Resist Torture/Drugs or take 1d6 HP damage."
 items:
   # --- SKILLS ---
-  - _id: bf0skill00007a
-    _key: "!items!bf0skill00007a"
+  - _id: bf0skill00007a00
+    _key: "!items!bf0skill00007a00"
     name: Athletics
     type: skill
     system:
@@ -66,8 +66,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00007b
-    _key: "!items!bf0skill00007b"
+  - _id: bf0skill00007b00
+    _key: "!items!bf0skill00007b00"
     name: Brawling
     type: skill
     system:
@@ -76,8 +76,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00007c
-    _key: "!items!bf0skill00007c"
+  - _id: bf0skill00007c00
+    _key: "!items!bf0skill00007c00"
     name: Concentration
     type: skill
     system:
@@ -86,8 +86,8 @@ items:
       category: awarenessSkills
       basic: false
       core: false
-  - _id: bf0skill00007d
-    _key: "!items!bf0skill00007d"
+  - _id: bf0skill00007d00
+    _key: "!items!bf0skill00007d00"
     name: Endurance
     type: skill
     system:
@@ -96,8 +96,8 @@ items:
       category: bodySkills
       basic: false
       core: false
-  - _id: bf0skill00007e
-    _key: "!items!bf0skill00007e"
+  - _id: bf0skill00007e00
+    _key: "!items!bf0skill00007e00"
     name: Evasion
     type: skill
     system:
@@ -106,8 +106,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00007f
-    _key: "!items!bf0skill00007f"
+  - _id: bf0skill00007f00
+    _key: "!items!bf0skill00007f00"
     name: Human Perception
     type: skill
     system:
@@ -116,8 +116,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00007g
-    _key: "!items!bf0skill00007g"
+  - _id: bf0skill00007g00
+    _key: "!items!bf0skill00007g00"
     name: Melee Weapon
     type: skill
     system:
@@ -126,8 +126,8 @@ items:
       category: fightingSkills
       basic: true
       core: false
-  - _id: bf0skill00007h
-    _key: "!items!bf0skill00007h"
+  - _id: bf0skill00007h00
+    _key: "!items!bf0skill00007h00"
     name: Perception
     type: skill
     system:
@@ -136,8 +136,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00007i
-    _key: "!items!bf0skill00007i"
+  - _id: bf0skill00007i00
+    _key: "!items!bf0skill00007i00"
     name: Stealth
     type: skill
     system:
@@ -146,8 +146,8 @@ items:
       category: awarenessSkills
       basic: true
       core: false
-  - _id: bf0skill00007j
-    _key: "!items!bf0skill00007j"
+  - _id: bf0skill00007j00
+    _key: "!items!bf0skill00007j00"
     name: Wilderness Survival
     type: skill
     system:
@@ -157,8 +157,8 @@ items:
       basic: false
       core: false
   # --- WEAPONS ---
-  - _id: bf0weap00007a
-    _key: "!items!bf0weap00007a"
+  - _id: bf0weap00007a000
+    _key: "!items!bf0weap00007a000"
     name: Venom Fangs/Claws
     type: weapon
     system:
@@ -172,8 +172,8 @@ items:
       isRanged: false
       description:
         value: "<p>On hit, target must beat DV13 Resist Torture/Drugs or take 1d6 additional damage directly to HP.</p>"
-  - _id: bf0weap00007b
-    _key: "!items!bf0weap00007b"
+  - _id: bf0weap00007b000
+    _key: "!items!bf0weap00007b000"
     name: Brawling Attack
     type: weapon
     system:
@@ -186,8 +186,8 @@ items:
       combatNumber: 5
       isRanged: false
   # --- CYBERWARE ---
-  - _id: bf0cyber0007a
-    _key: "!items!bf0cyber0007a"
+  - _id: bf0cyber0007a000
+    _key: "!items!bf0cyber0007a000"
     name: "Cyberaudio Suite w/ Audio Recorder"
     type: cyberware
     system:
@@ -199,47 +199,47 @@ items:
       isFoundational: true
       isInstalled: true
       isElectronic: true
-  - _id: bf0cyber0007b
-    _key: "!items!bf0cyber0007b"
+  - _id: bf0cyber0007b000
+    _key: "!items!bf0cyber0007b000"
     name: "Cybereye w/ MicroVideo"
     type: cyberware
     system:
       description:
         value: "<p>Cybereye with MicroVideo capability for visual recording.</p>"
       source: "Your New Best Friend"
-      type: cybereye
+      type: cyberEye
       isWeapon: false
       isFoundational: true
       isInstalled: true
       isElectronic: true
-  - _id: bf0cyber0007c
-    _key: "!items!bf0cyber0007c"
+  - _id: bf0cyber0007c000
+    _key: "!items!bf0cyber0007c000"
     name: "Neural Link w/ Chipware Socket & Memory Chip"
     type: cyberware
     system:
       description:
         value: "<p>Neural Link with Chipware Socket and Memory Chip for data storage.</p>"
       source: "Your New Best Friend"
-      type: neuralLink
+      type: neuralWare
       isWeapon: false
       isFoundational: true
       isInstalled: true
       isElectronic: true
-  - _id: bf0cyber0007d
-    _key: "!items!bf0cyber0007d"
+  - _id: bf0cyber0007d000
+    _key: "!items!bf0cyber0007d000"
     name: Skinweave
     type: cyberware
     system:
       description:
         value: "<p>Skinweave providing SP 7.</p>"
       source: "Your New Best Friend"
-      type: externalBody
+      type: cyberwareExternal
       isWeapon: false
       isFoundational: false
       isInstalled: true
   # --- ARMOR ---
-  - _id: bf0armor0007a
-    _key: "!items!bf0armor0007a"
+  - _id: bf0armor0007a000
+    _key: "!items!bf0armor0007a000"
     name: Skinweave
     type: armor
     system:
