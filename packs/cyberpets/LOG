@@ -1,5 +1,5 @@
-2026/04/13-21:28:53.075 6e00 Delete type=3 #1
-2026/04/13-21:28:53.080 3d64 Level-0 table #5: started
-2026/04/13-21:28:53.093 3d64 Level-0 table #5: 17496 bytes OK
-2026/04/13-21:28:53.093 3d64 Delete type=0 #3
-2026/04/13-21:28:53.093 3d64 Manual compaction at level-0 from '!actors!bf0actor0000001' @ 72057594037927935 : 1 .. '!items!bf0weap00008b' @ 0 : 0; will stop at (end)
+2026/04/13-21:37:01.468 9b6c Recovering log #7
+2026/04/13-21:37:01.468 9b6c Level-0 table #9: started
+2026/04/13-21:37:01.471 9b6c Level-0 table #9: 9258 bytes OK
+2026/04/13-21:37:01.473 9b6c Delete type=0 #7
+2026/04/13-21:37:01.473 9b6c Delete type=3 #6
