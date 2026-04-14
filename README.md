@@ -22,12 +22,12 @@ https://raw.githubusercontent.com/VebjornNyvoll/best-friend-foundry/main/module.
 
 All content is organized under a **"Your New Best Friend"** folder in the compendium sidebar.
 
-| Pack | Type | Entries | Description |
-|------|------|---------|-------------|
-| Best Friend: Cyberpets | Actor | 8 | Complete cyberpet actors with stats, skills, weapons, and cyberware |
-| Best Friend: Cyberware | Item | 7 | New cyberware items ready to install on any actor |
-| Best Friend: Macros | Macro | 9 | One-click macros for every special ability |
-| Best Friend: Journals | JournalEntry | 3 | Pet-keeping rules, adventure hooks, Cyberbear martial art |
+| Pack                   | Type         | Entries | Description                                                         |
+| ---------------------- | ------------ | ------- | ------------------------------------------------------------------- |
+| Best Friend: Cyberpets | Actor        | 8       | Complete cyberpet actors with stats, skills, weapons, and cyberware |
+| Best Friend: Cyberware | Item         | 7       | New cyberware items ready to install on any actor                   |
+| Best Friend: Macros    | Macro        | 9       | One-click macros for every special ability                          |
+| Best Friend: Journals  | JournalEntry | 3       | Pet-keeping rules, adventure hooks, Cyberbear martial art           |
 
 ---
 
@@ -35,30 +35,30 @@ All content is organized under a **"Your New Best Friend"** folder in the compen
 
 Every cyberpet is a fully configured Mook/Lieutenant/Mini-Boss actor with embedded skills, weapons, cyberware, and armor. Import them from the compendium and they're ready to drop onto any scene.
 
-| Cyberpet | Level | HP | Cost | Cyberware Slots | Special Abilities |
-|----------|-------|----|------|-----------------|-------------------|
-| **Datarabbit** | Mook | 10 | 1,000eb | 2 | Chipware storage in EMP-hardened cybereye, homing tracer |
-| **Forever Turtle** | Hardened Mook | 15 | 2,000eb | 2 | **Protection** (shell covers head), **Trauma Response Nanomatrix** |
-| **Neon Newt** | Hardened Mook | 20 | 2,000eb | 1 | **Flamebreath**, **Acid Secretion** |
-| **Obsidian Ocelot** | Hardened Lt. | 40 | 4,000eb | 3 | **Combat Awareness Rank 5**, FBC Chameleon Coating |
-| **Cyberbear** | Mini-Boss | 55 | 20,000eb | 3 | **Recovery**, **Three-Arm Strike** (Cyberbear Martial Art) |
-| **Cyberboa** | Hardened Lt. | 40 | 4,000eb | 3 | **Airhypo Vampyres** (injectable poison, 5 doses) |
-| **Cyberrat** | Mook | 10 | 1,000eb | 2 | **Venom Fangs/Claws** (DV13 resist or 1d6 direct HP damage) |
-| **Cyberwolf** | Hardened Lt. | 40 | 4,000eb | 3 | **Combat Awareness Rank 3** (requires pack within 20m) |
+| Cyberpet            | Level         | HP  | Cost     | Cyberware Slots | Special Abilities                                                  |
+| ------------------- | ------------- | --- | -------- | --------------- | ------------------------------------------------------------------ |
+| **Datarabbit**      | Mook          | 10  | 1,000eb  | 2               | Chipware storage in EMP-hardened cybereye, homing tracer           |
+| **Forever Turtle**  | Hardened Mook | 15  | 2,000eb  | 2               | **Protection** (shell covers head), **Trauma Response Nanomatrix** |
+| **Neon Newt**       | Hardened Mook | 20  | 2,000eb  | 1               | **Flamebreath**, **Acid Secretion**                                |
+| **Obsidian Ocelot** | Hardened Lt.  | 40  | 4,000eb  | 3               | **Combat Awareness Rank 5**, FBC Chameleon Coating                 |
+| **Cyberbear**       | Mini-Boss     | 55  | 20,000eb | 3               | **Recovery**, **Three-Arm Strike** (Cyberbear Martial Art)         |
+| **Cyberboa**        | Hardened Lt.  | 40  | 4,000eb  | 3               | **Airhypo Vampyres** (injectable poison, 5 doses)                  |
+| **Cyberrat**        | Mook          | 10  | 1,000eb  | 2               | **Venom Fangs/Claws** (DV13 resist or 1d6 direct HP damage)        |
+| **Cyberwolf**       | Hardened Lt.  | 40  | 4,000eb  | 3               | **Combat Awareness Rank 3** (requires pack within 20m)             |
 
 ### Cyberware
 
 Seven new cyberware items from the DLC, configured with correct install type, humanity loss, price, and slots.
 
-| Item | Type | Cost | Install |
-|------|------|------|---------|
-| Chipware Compartment | Cybereye (3 option slots) | 100eb | Clinic |
-| Combat Jaw | External Body (2 slots) | 500eb | Hospital |
-| FBC Chameleon Coating | External Body | 1,000eb | Hospital |
-| Flashbulb | Cyberarm (2 option slots) | 500eb | Clinic |
-| Hardened Cybereye Casing | Cybereye | 500eb | Clinic |
-| Homing Tracer Cyberfinger | Cyberfinger | 500eb | Mall |
-| Trauma Response Nanomatrix | Internal Body | 1,000eb | Hospital |
+| Item                       | Type                      | Cost    | Install  |
+| -------------------------- | ------------------------- | ------- | -------- |
+| Chipware Compartment       | Cybereye (3 option slots) | 100eb   | Clinic   |
+| Combat Jaw                 | External Body (2 slots)   | 500eb   | Hospital |
+| FBC Chameleon Coating      | External Body             | 1,000eb | Hospital |
+| Flashbulb                  | Cyberarm (2 option slots) | 500eb   | Clinic   |
+| Hardened Cybereye Casing   | Cybereye                  | 500eb   | Clinic   |
+| Homing Tracer Cyberfinger  | Cyberfinger               | 500eb   | Mall     |
+| Trauma Response Nanomatrix | Internal Body             | 1,000eb | Hospital |
 
 ---
 
@@ -76,17 +76,20 @@ Every special ability has a macro in the compendium. Select the cyberpet's token
 ### Ability Reference
 
 #### Flamebreath (Neon Newt)
+
 - **Macro:** Flamebreath (Neon Newt)
 - **Roll:** d10 + Combat Number 8 (attack), 1d6 (damage)
 - **Effect:** Acts as a Flamethrower. Cannot be used two turns in a row — the macro enforces the cooldown automatically.
 
 #### Acid Secretion (Neon Newt)
+
 - **Macro:** Acid Secretion (Neon Newt)
 - **Requires:** A targeted token
 - **Roll:** d10 + Combat Number 5 (attack)
 - **Effect:** On hit, reduces SP of all worn armor on the target by 1. The SP reduction is applied automatically to the target's armor items.
 
 #### Venom Fangs/Claws (Cyberrat)
+
 - **Macro:** Venom Fangs/Claws (Cyberrat)
 - **Flow:** Two-stage. The macro posts a chat card, then the target clicks "Resist" to roll.
   1. Run the macro after a successful Cyberrat attack
@@ -95,15 +98,18 @@ Every special ability has a macro in the compendium. Select the cyberpet's token
   4. On failure: 1d6 damage is dealt directly to the target's HP (bypasses armor)
 
 #### Airhypo Vampyres (Cyberboa)
+
 - **Macro:** Airhypo Vampyres (Cyberboa)
 - **Effect:** Tracks doses (max 5). Each use decrements the counter and posts an injection notice. The chat card includes a **Reload** button to refill doses. The actual drug/toxin effect is applied manually by the GM (since substances vary).
 
 #### Recovery (Cyberbear)
+
 - **Macro:** Recovery (Cyberbear)
 - **Roll:** DEX + Martial Arts (Cyberbear) vs DV13
 - **Effect:** If the Cyberbear needs to Get Up, a successful roll means it didn't cost an Action.
 
 #### Three-Arm Strike (Cyberbear)
+
 - **Macro:** Three-Arm Strike (Cyberbear)
 - **Prerequisite:** Must have hit the same target with two Bear Claw attacks this turn (GM confirms)
 - **Roll:** DEX + Martial Arts (Cyberbear) vs DV15
@@ -115,17 +121,20 @@ Every special ability has a macro in the compendium. Select the cyberpet's token
 - **On failure:** The brain tumor causes 5 damage directly to the Cyberbear's HP. This is applied automatically.
 
 #### Protection (Forever Turtle)
+
 - **Macro:** Protection (Forever Turtle)
 - **Effect:** Toggles the shell protection on/off.
   - **On:** The Hardened Shell's body SP extends to the head location (the armor item is actually updated). An Active Effect icon appears on the token. The turtle cannot be targeted by Aimed Shots.
   - **Off:** Head SP is restored to its original value and the Active Effect is removed.
 
 #### Combat Awareness (Ocelot/Wolf)
+
 - **Macro:** Combat Awareness (Ocelot/Wolf)
 - **Obsidian Ocelot:** Always active at Rank 5 — the macro confirms this.
 - **Cyberwolf:** Active at Rank 3 only when within 20m of another Cyberwolf. The macro checks all tokens on the canvas and reports how many allied Cyberwolves are in range.
 
 #### Trauma Response Nanomatrix
+
 - **Macro:** Trauma Response Nanomatrix
 - **Effect:** Restores all Skinweave/Subdermal Armor on the actor to full SP. Usable once per day — the macro enforces this. The chat card includes a **Reset Daily Uses** button for the GM to clear the limit.
 
@@ -133,11 +142,11 @@ Every special ability has a macro in the compendium. Select the cyberpet's token
 
 ## Journal Entries
 
-| Journal | Contents |
-|---------|----------|
-| **Cyberpet Rules** | Keeping (lifestyle costs, housing requirements), Training (Animal Handling DV checks), Cybering (Medtech requirements, Tech Upgrade rules, cross-species cyberware compatibility) |
-| **Cyberpet Adventure Hooks** | Four adventure starters: It Came From the Sewers, Too Good to Be True, Head of Security, Critter Combat |
-| **Cyberbear Martial Art** | Full rules text for Recovery and Three-Arm Strike special moves |
+| Journal                      | Contents                                                                                                                                                                          |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cyberpet Rules**           | Keeping (lifestyle costs, housing requirements), Training (Animal Handling DV checks), Cybering (Medtech requirements, Tech Upgrade rules, cross-species cyberware compatibility) |
+| **Cyberpet Adventure Hooks** | Four adventure starters: It Came From the Sewers, Too Good to Be True, Head of Security, Critter Combat                                                                           |
+| **Cyberbear Martial Art**    | Full rules text for Recovery and Three-Arm Strike special moves                                                                                                                   |
 
 ---
 
@@ -227,12 +236,11 @@ Ability chat cards use `data-action` attributes on buttons. The `renderChatMessa
 
 ---
 
-## Credits
+## Related links
 
-- **Your New Best Friend** DLC by [R. Talsorian Games](https://rtalsoriangames.com/)
+- **Your New Best Friend** DLC Rulebook by [R. Talsorian Games](https://rtalsoriangames.com/wp-content/uploads/2024/10/RTG-CPR-DLC-YourNewBestFriend.pdf)
 - **Cyberpunk RED Core** Foundry system by [The Project Red Team](https://gitlab.com/cyberpunk-red-team/fvtt-cyberpunk-red-core)
-- Module development assisted by Claude (Anthropic)
 
 ## License
 
-This module is an unofficial, fan-made implementation for personal use. Cyberpunk RED and all related content are trademarks of R. Talsorian Games. You must own the Your New Best Friend DLC to use this module.
+This module is an unofficial, fan-made implementation. I give no guarantees for further development/support. Cyberpunk RED and all related content are trademarks of R. Talsorian Games.
