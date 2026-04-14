@@ -76,6 +76,7 @@ export async function onVenomResistRoll(context = {}) {
       result: `${target.name} resisted the venom!`,
     }, {
       speaker: ChatMessage.getSpeaker({ actor: target }),
+      rolls: [...check._rolls],
     });
   } else {
     // Roll 1d6 damage directly to HP
@@ -100,6 +101,7 @@ export async function onVenomResistRoll(context = {}) {
       result: `Venom deals ${damage.total} damage directly to HP! (${oldHP} → ${newHP})`,
     }, {
       speaker: ChatMessage.getSpeaker({ actor: target }),
+      rolls: [...check._rolls, ...damage._rolls],
     });
   }
 }

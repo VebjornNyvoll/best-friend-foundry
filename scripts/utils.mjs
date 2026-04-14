@@ -32,27 +32,20 @@ export function getTargetedActor() {
 // ── CPR-Compatible Roll Helpers ─────────────────────────────────────
 
 /**
- * Show a Foundry Roll in 3D dice (Dice So Nice / DDDice) if available.
- * @param {Roll} roll - An evaluated Foundry Roll object
- */
-async function show3dDice(roll) {
-  if (game.dice3d) {
-    await game.dice3d.showForRoll(roll, game.user, true);
-  }
-}
-
-/**
  * Roll 1d10 with CPR critical handling.
  * - Natural 10: roll another d10, ADD to total (critical success)
  * - Natural 1: roll another d10, SUBTRACT from total (critical failure)
- * Triggers 3D dice animation if Dice So Nice is active.
+ *
+ * Roll objects are collected in the `_rolls` array. Pass them to
+ * sendAbilityCard() so Dice So Nice picks them up from the ChatMessage
+ * automatically — no manual showForRoll needed.
  *
  * @returns {Promise<{total: number, initialRoll: number, critRoll: number,
- *   isCritSuccess: boolean, isCritFail: boolean}>}
+ *   isCritSuccess: boolean, isCritFail: boolean, _rolls: Roll[]}>}
  */
 export async function cprRoll() {
   const baseRoll = await new Roll("1d10").evaluate();
-  await show3dDice(baseRoll);
+  const rolls = [baseRoll];
   const initialRoll = baseRoll.total;
 
   let critRoll = 0;
@@ -62,12 +55,12 @@ export async function cprRoll() {
   if (initialRoll === 10) {
     isCritSuccess = true;
     const extra = await new Roll("1d10").evaluate();
-    await show3dDice(extra);
+    rolls.push(extra);
     critRoll = extra.total;
   } else if (initialRoll === 1) {
     isCritFail = true;
     const extra = await new Roll("1d10").evaluate();
-    await show3dDice(extra);
+    rolls.push(extra);
     critRoll = extra.total;
   }
 
@@ -76,7 +69,7 @@ export async function cprRoll() {
     ? initialRoll - critRoll
     : initialRoll + critRoll;
 
-  return { total, initialRoll, critRoll, isCritSuccess, isCritFail };
+  return { total, initialRoll, critRoll, isCritSuccess, isCritFail, _rolls: rolls };
 }
 
 /**
@@ -106,7 +99,7 @@ export async function cprSkillCheck(actor, statKey, skillName) {
     statKey,
     skillName: skillItem?.name ?? skillName,
     roll,
-    // DV comparison is done by caller — we just provide the total
+    _rolls: roll._rolls,
     success: null,
     dv: null,
   };
@@ -121,7 +114,7 @@ export async function cprSkillCheck(actor, statKey, skillName) {
 export async function cprAttackRoll(combatNumber) {
   const roll = await cprRoll();
   const total = roll.total + combatNumber;
-  return { total, combatNumber, roll };
+  return { total, combatNumber, roll, _rolls: roll._rolls };
 }
 
 /**
@@ -132,8 +125,7 @@ export async function cprAttackRoll(combatNumber) {
  */
 export async function cprDamageRoll(formula) {
   const roll = await new Roll(formula).evaluate();
-  await show3dDice(roll);
-  return { total: roll.total, formula, result: roll.result };
+  return { total: roll.total, formula, result: roll.result, _rolls: [roll] };
 }
 
 /**
@@ -257,8 +249,13 @@ export async function sendAbilityCard(template, data, options = {}) {
     `modules/${MODULE_ID}/templates/chat/${template}`,
     data
   );
+
+  // Collect Roll objects so Dice So Nice animates them from the ChatMessage
+  const rolls = options.rolls ?? [];
+
   return ChatMessage.create({
     content,
+    rolls,
     speaker: options.speaker ?? ChatMessage.getSpeaker(),
     ...options,
   });

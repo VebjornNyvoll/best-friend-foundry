@@ -49,5 +49,6 @@ export async function onFlamebreath(context = {}) {
     damageFormula: damage.result,
   }, {
     speaker: ChatMessage.getSpeaker({ actor }),
+    rolls: [...attack._rolls, ...damage._rolls],
   });
 }

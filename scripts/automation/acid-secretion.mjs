@@ -74,5 +74,6 @@ export async function onAcidSecretion(context = {}) {
       : "No armor to degrade.",
   }, {
     speaker: ChatMessage.getSpeaker({ actor }),
+    rolls: [...attack._rolls],
   });
 }

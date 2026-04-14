@@ -44,6 +44,7 @@ export async function onRecovery(context = {}) {
       : "Failed. The Get Up action costs an Action as normal.",
   }, {
     speaker: ChatMessage.getSpeaker({ actor }),
+    rolls: [...check._rolls],
   });
 }
 
@@ -91,6 +92,7 @@ export async function onThreeArmStrike(context = {}) {
       targetId: context.targetId ?? "",
     }, {
       speaker: ChatMessage.getSpeaker({ actor }),
+      rolls: [...check._rolls],
     });
   } else {
     // Failure: 5 damage directly to Cyberbear's HP from brain tumor
@@ -113,6 +115,7 @@ export async function onThreeArmStrike(context = {}) {
       result: `Failed! The brain tumor causes ${actor.name} to suffer 5 damage directly to HP. (${oldHP} → ${newHP})`,
     }, {
       speaker: ChatMessage.getSpeaker({ actor }),
+      rolls: [...check._rolls],
     });
   }
 }
@@ -132,6 +135,7 @@ export async function onThreeArmStrikeOption(context = {}) {
 
   const option = context.option;
   let resultText = "";
+  let optionRolls = [];
 
   switch (option) {
     case "grapple":
@@ -144,12 +148,14 @@ export async function onThreeArmStrikeOption(context = {}) {
       const damage = await cprDamageRoll("3d6");
       const atkDisplay = formatRollDisplay(attack.roll);
       resultText = `${actor.name} attacks again! Attack: ${attack.total} (${atkDisplay.breakdown}), Damage: ${damage.total} (${damage.result})`;
+      optionRolls = [...attack._rolls, ...damage._rolls];
       break;
     }
 
     case "criticalInjury": {
       const critRoll = await cprDamageRoll("2d6");
       resultText = `${target?.name ?? "Target"} suffers a random Body Critical Injury! Roll: ${critRoll.total} (${critRoll.result}). See CP:R page 187.`;
+      optionRolls = [...critRoll._rolls];
       break;
     }
 
@@ -188,6 +194,7 @@ export async function onThreeArmStrikeOption(context = {}) {
         <p>${resultText}</p>
       </div>
     </div>`,
+    rolls: optionRolls,
     speaker: ChatMessage.getSpeaker({ actor }),
   });
 }
